@@ -1,33 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Demo Shop</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Demo Shop</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- 顶部横幅大图 -->
-<div class="top-banner">
-    <img src="assets/datu.jpg" class="banner-img" alt="banner" />
+    <!-- 🔵 顶部大横幅图片 -->
+    <div class="hero">
+        <img src="assets/datu.jpg" class="hero-img">
+    </div>
 
-    <!-- 左侧 logo -->
-    <img src="assets/xiaologo.jpg" class="banner-logo" alt="logo" />
-</div>
+    <!-- 🔵 logo + 面包屑 + 搜索框 -->
+    <div class="top-nav">
+        <img src="assets/xiaologo.jpg" class="logo">
 
-<!-- 导航栏 -->
-<nav class="navbar">
-    <a href="#">HOME</a>
-    <a href="#">CHRISTMAS PARTY</a>
-    <a href="#">FALL</a>
-    <a href="#">HALLOWEEN PARTY</a>
-</nav>
+        <div class="breadcrumbs">
+            Life's Fun Start Here  >  Christmas Party
+        </div>
 
-<!-- 产品列表容器 -->
-<div class="product-list" id="product-list"></div>
+        <input type="text" class="search" placeholder="Search all Life's Fun Start Here">
+    </div>
 
-<script src="products.json"></script>
-<script src="script.js"></script>
+    <!-- 🔵 主导航栏 -->
+    <nav class="main-menu">
+        <a href="index.html">HOME</a>
+        <a href="index.html">CHRISTMAS PARTY</a>
+        <a href="#">FALL</a>
+        <a href="#">HALLOWEEN PARTY</a>
+        <a href="#">MORE</a>
+    </nav>
+
+    <!-- 🔵 产品列表区域 -->
+    <div class="product-container" id="product-list">
+        <!-- 产品会自动生成 -->
+    </div>
+
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+
 </body>
 </html>
