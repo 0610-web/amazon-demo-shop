@@ -3,44 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amazon Demo Shop</title>
+    <title>90Shine Store</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
 
-    <!-- 🔵 顶部大横幅图片 -->
-    <div class="hero">
-        <img src="assets/datu.jpg" class="hero-img">
+    <div class="banner-container">
+        <img src="assets/datu.jpg" alt="Welcome Banner" class="top-banner">
     </div>
 
-    <!-- 🔵 logo + 面包屑 + 搜索框 -->
-    <div class="top-nav">
-        <img src="assets/xiaologo.jpg" class="logo">
+    <header class="site-header">
+        <div class="container header-wrapper">
+            
+            <div class="logo">
+                <img src="assets/xiaologo.jpg" alt="90Shine Logo">
+            </div>
 
-        <div class="breadcrumbs">
-            Life's Fun Start Here  >  Christmas Party
+            <div class="search-bar">
+                <select class="search-select">
+                    <option>All</option>
+                </select>
+                <input type="text" placeholder="Search all Life's Fun Start Here">
+                <button><i class="fas fa-search"></i></button>
+            </div>
         </div>
+    </header>
 
-        <input type="text" class="search" placeholder="Search all Life's Fun Start Here">
-    </div>
-
-    <!-- 🔵 主导航栏 -->
-    <nav class="main-menu">
-        <a href="index.html">HOME</a>
-        <a href="index.html">CHRISTMAS PARTY</a>
-        <a href="#">FALL</a>
-        <a href="#">HALLOWEEN PARTY</a>
-        <a href="#">MORE</a>
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">HOLIDAY MAGNET</a></li>
+                <li><a href="#" class="active">CHRISTMAS PARTY</a></li>
+                <li><a href="#">FALL</a></li>
+                <li><a href="#">HALLOWEEN PARTY</a></li>
+                <li><a href="#">MORE <i class="fas fa-caret-down"></i></a></li>
+            </ul>
+        </div>
     </nav>
 
-    <!-- 🔵 产品列表区域 -->
-    <div class="product-container" id="product-list">
-        <!-- 产品会自动生成 -->
-    </div>
+    <main class="container">
+        <div id="product-grid" class="product-grid">
+            </div>
+    </main>
 
-    <script src="products.js"></script>
     <script src="script.js"></script>
-
 </body>
 </html>
