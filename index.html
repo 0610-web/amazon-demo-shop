@@ -4,7 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>我的节日派对商店</title>
-    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="style.css?v=3">
+    <style>
+        /* 为了配合这次修改，我增加了一点内联样式，确保菜单变宽 */
+        /* 你也可以把这些样式稍后移到 style.css 里 */
+        .mega-menu {
+            min-width: 700px !important; /* 让菜单足够宽，能放下一排多个词 */
+            padding: 20px !important;
+            left: -100px !important; /*稍微往左偏一点，防止超出屏幕 */
+        }
+        
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 分成3列显示 */
+            gap: 15px; /* 间距 */
+        }
+
+        .menu-grid a {
+            font-size: 13px;
+            color: #333;
+            text-decoration: none;
+            display: block;
+            padding: 5px 0;
+        }
+        .menu-grid a:hover {
+            color: #e77600;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
@@ -13,22 +40,53 @@
             <img src="assets/xiaologo.jpg" alt="Logo" class="nav-logo">
             
             <ul class="nav-links">
-                <li><a href="#">HOME</a></li>
+                <li><a href="index.html">HOME</a></li>
+                
                 <li class="dropdown-item">
                     <span class="dropdown-trigger">HOLIDAY MAGNET ▾</span>
-                    <div class="dropdown-menu">
-                        <a href="#">Kitchen Appliances</a>
+                    <div class="dropdown-menu mega-menu">
+                        <div class="menu-grid">
+                            <a href="#">Kitchen Appliances</a>
+                            <a href="#">Household Appliances</a>
+                            <a href="#">Appliance Parts</a>
+                            <a href="#">Robot Vacuums Accessories</a>
+                            <a href="#">Cookware & Accessories</a>
+                            <a href="#">Teaware Sets</a>
+                            
+                            <a href="#">Household Articles</a>
+                            <a href="#">Rain Gear</a>
+                            <a href="#">Bathroom Supplies</a>
+                            <a href="#">Thermometer</a>
+                            <a href="#">Furnitures</a>
+                            <a href="#">Home Textile</a>
+
+                            <a href="#">Baby Products</a>
+                            <a href="#">Health Care</a>
+                            <a href="#">Indoor Lighting</a>
+                            <a href="#">Outdoor Lighting</a>
+                            <a href="#">Hand Operated Tools</a>
+                        </div>
                     </div>
                 </li>
+
                 <li class="dropdown-item">
                     <span class="dropdown-trigger" style="color: #c45500;">OUTDOOR & SPORTS ▾</span>
                     <div class="dropdown-menu small-menu">
                         <a href="#">Camping</a>
+                        <a href="#">Hiking</a>
                     </div>
                 </li>
+
                 <li class="active">CHRISTMAS PARTY</li>
                 <li>HALLOWEEN PARTY</li>
-                <li>MORE ▾</li>
+                
+                <li class="dropdown-item">
+                    <span class="dropdown-trigger">MORE ▾</span>
+                    <div class="dropdown-menu">
+                        <a href="#">About Us</a>
+                        <a href="#">Contact Support</a>
+                    </div>
+                </li>
             </ul>
             
             <div class="search-bar">Search all products... 🔍</div>
@@ -43,7 +101,6 @@
 
     <main class="container product-grid">
         
-        <!-- 产品1：已修正链接 -->
         <div class="product-card">
             <div class="image-box">
                 <a href="product.html">
@@ -56,7 +113,6 @@
             <button onclick="window.location.href='product.html'">View Details</button>
         </div>
 
-        <!-- 产品2 -->
         <div class="product-card">
             <div class="image-box">
                 <img src="https://via.placeholder.com/300x300" alt="产品展示">
@@ -67,7 +123,6 @@
             <button>Add to Cart</button>
         </div>
 
-        <!-- 产品3 -->
         <div class="product-card">
             <div class="image-box">
                 <img src="https://via.placeholder.com/300x300" alt="产品展示">
@@ -78,7 +133,6 @@
             <button>Add to Cart</button>
         </div>
 
-        <!-- 产品4 -->
         <div class="product-card">
             <div class="image-box">
                 <img src="https://via.placeholder.com/300x300" alt="产品展示">
