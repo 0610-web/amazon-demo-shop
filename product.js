@@ -1,23 +1,39 @@
-async function loadProduct() {
+function getQuery(name) {
   const url = new URL(window.location.href);
-  const id = url.searchParams.get("id");
-
-  const res = await fetch("products.json");
-  const products = await res.json();
-
-  const p = products.find(x => x.id == id);
-
-  document.getElementById("product-title").innerText = p.title;
-  document.getElementById("product-description").innerText = p.description;
-  document.getElementById("product-price").innerText = "$" + p.price;
-  document.getElementById("main-image").src = p.images[0];
-
-  const thumbs = document.getElementById("thumbs");
-  p.images.forEach(img => {
-    thumbs.innerHTML += `<img class="thumb" onclick="document.getElementById('main-image').src='${img}'" src="${img}">`;
-  });
-
-  document.getElementById("add-to-cart-btn").onclick = () => addToCart(p);
+  return url.searchParams.get(name);
 }
 
-loadProduct();
+const id = getQuery("id");
+
+fetch("products.json")
+  .then(res => res.json())
+  .then(products => {
+    const product = products.find(p => p.id == id);
+
+    document.getElementById("product-container").innerHTML = `
+      <div class="product-container">
+        
+        <div class="product-images">
+          <img src="${product.images[0]}" class="main-image">
+        </div>
+
+        <div class="product-info">
+          <h2>${product.title}</h2>
+          <p class="price">$${product.price}</p>
+          <p>${product.description}</p>
+        </div>
+
+        <div class="product-buybox">
+          <button class="addcart-btn" onclick="addToCart(${product.id})">Add to Cart</button>
+          <button class="buy-btn" onclick="window.location='thankyou.html'">Buy Now</button>
+        </div>
+      </div>
+    `;
+  });
+
+function addToCart(id) {
+  let cart = JSON.parse(localStorage.getItem("cart") || "[]");
+  cart.push(id);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  alert("Added to cart!");
+}
