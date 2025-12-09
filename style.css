@@ -22,7 +22,7 @@ a { text-decoration: none; color: inherit; }
     padding: 0;
     background: #fff;
     position: relative;
-    z-index: 1000;
+    z-index: 1000; /* 确保导航栏在最上层 */
 }
 .nav-container {
     display: flex;
@@ -58,9 +58,9 @@ a { text-decoration: none; color: inherit; }
     border-bottom: 2px solid #007185;
 }
 
-/* === 下拉菜单通用样式 === */
+/* === 下拉菜单核心代码 (必须确保这一段存在) === */
 .dropdown-menu {
-    display: none;
+    display: none; /* 【关键】默认是隐藏的！如果你看到文字堆在页面上，就是这行没生效 */
     position: absolute;
     top: 60px;
     left: 0;
@@ -68,22 +68,20 @@ a { text-decoration: none; color: inherit; }
     border: 1px solid #ddd;
     border-top: none;
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-    width: 600px; /* 默认大菜单宽度 */
+    width: 600px;
     padding: 20px;
     z-index: 999;
-    
-    /* 默认 3 列布局 */
     grid-template-columns: repeat(3, 1fr); 
     gap: 15px;
 }
 
-/* 【新增】针对小菜单的特殊样式 (OUTDOOR & SPORTS) */
+/* 小菜单样式 (OUTDOOR & SPORTS) */
 .dropdown-menu.small-menu {
-    width: 200px; /* 宽度改小 */
-    grid-template-columns: 1fr; /* 改为单列显示 */
+    width: 200px;
+    grid-template-columns: 1fr; /* 单列 */
 }
 
-/* 鼠标悬停显示 */
+/* 【关键】鼠标悬停时，display 变成 grid (显示出来) */
 .dropdown-item:hover .dropdown-menu {
     display: grid;
 }
