@@ -1,64 +1,94 @@
-<!-- === 数量选择 & 加入购物车区域 === -->
-<div class="add-cart-section" style="margin-top: 20px;">
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的节日派对商店</title>
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
 
-    <!-- 数量输入 -->
-    <label for="qty" style="font-size: 16px; font-weight: bold;">Qty</label>
-    <input 
-        id="qty" 
-        type="number" 
-        value="1" 
-        min="1" 
-        style="
-            width: 60px; 
-            padding: 8px; 
-            font-size: 16px; 
-            margin-left: 10px; 
-            border: 1px solid #ccc; 
-            border-radius: 6px;
-        "
-    />
+    <nav class="top-nav">
+        <div class="container nav-container">
+            <img src="assets/xiaologo.jpg" alt="Logo" class="nav-logo">
+            
+            <ul class="nav-links">
+                <li><a href="#">HOME</a></li>
+                <li class="dropdown-item">
+                    <span class="dropdown-trigger">HOLIDAY MAGNET ▾</span>
+                    <div class="dropdown-menu">
+                        <a href="#">Kitchen Appliances</a>
+                    </div>
+                </li>
+                <li class="dropdown-item">
+                    <span class="dropdown-trigger" style="color: #c45500;">OUTDOOR & SPORTS ▾</span>
+                    <div class="dropdown-menu small-menu">
+                        <a href="#">Camping</a>
+                    </div>
+                </li>
+                <li class="active">CHRISTMAS PARTY</li>
+                <li>HALLOWEEN PARTY</li>
+                <li>MORE ▾</li>
+            </ul>
+            
+            <div class="search-bar">Search all products... 🔍</div>
+        </div>
+    </nav>
 
-    <!-- 加入购物车按钮 -->
-    <button 
-        onclick="addToCart()" 
-        style="
-            display: block;
-            margin-top: 15px;
-            background-color: #f08804;
-            border: none;
-            padding: 14px 20px;
-            width: 250px;
-            border-radius: 25px;
-            color: white;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-        "
-    >
-        + ADD TO CART
-    </button>
+    <header class="banner-section">
+        <div class="container banner-container">
+            <img src="assets/datu.jpg" alt="Store Banner" style="width: 100%; height: 240px; object-fit: cover; display: block;">
+        </div>
+    </header>
 
-</div>
+    <main class="container product-grid">
+        
+        <!-- 产品1：已修复链接 -->
+        <div class="product-card">
+            <div class="image-box">
+                <a href="product.html">
+                    <img src="assets/Christmas-Garage-Door-Decorations-Magnets/Christmas-garage-door1.jpg" alt="Garage Door Decor">
+                </a>
+            </div>
+            <h3><a href="product.html" style="text-decoration:none; color:inherit;">Christmas Garage Door Decorations</a></h3>
+            <div class="rating">★★★★★ 999+</div>
+            <div class="price">$19.99 <span class="prime">✔prime</span></div>
+            <button onclick="window.location.href='product.html'">View Details</button>
+        </div>
 
-<script>
-    // 加入购物车函数
-    function addToCart() {
-        var qty = parseInt(document.getElementById("qty").value);
-        if (qty < 1) qty = 1;
+        <!-- 产品2（保留原有占位内容） -->
+        <div class="product-card">
+            <div class="image-box">
+                <img src="https://via.placeholder.com/300x300" alt="产品展示">
+            </div>
+            <h3>43PCS Christmas Gnome Magnets</h3>
+            <div class="rating">★★★★★ 8,558</div>
+            <div class="price">$15.99 <span class="prime">✔prime</span></div>
+            <button>Add to Cart</button>
+        </div>
 
-        var cart = JSON.parse(localStorage.getItem("cart")) || [];
+        <!-- 产品3 -->
+        <div class="product-card">
+            <div class="image-box">
+                <img src="https://via.placeholder.com/300x300" alt="产品展示">
+            </div>
+            <h3>314PCS Christmas Decorations</h3>
+            <div class="rating">★★★★☆ 1,897</div>
+            <div class="price">$19.99 <span class="prime">✔prime</span></div>
+            <button>Add to Cart</button>
+        </div>
 
-        // 示例：添加当前产品（你可以改 id/title/price）
-        var product = {
-            id: 1,
-            title: "32PCS Christmas Garage Door Decorations",
-            price: 19.99,
-            qty: qty
-        };
+        <!-- 产品4 -->
+        <div class="product-card">
+            <div class="image-box">
+                <img src="https://via.placeholder.com/300x300" alt="产品展示">
+            </div>
+            <h3>Roll The Dice Gift Exchange Game</h3>
+            <div class="rating">★★★★☆ 339</div>
+            <div class="price">$11.99 <span class="prime">✔prime</span></div>
+            <button>Add to Cart</button>
+        </div>
+    </main>
 
-        cart.push(product);
-        localStorage.setItem("cart", JSON.stringify(cart));
-
-        alert(qty + " item(s) added to cart!");
-    }
-</script>
+</body>
+</html>
