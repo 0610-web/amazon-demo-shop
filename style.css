@@ -3,86 +3,92 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* 顶部横幅图片 */
-.hero-img {
+/* 头图固定高度，不全屏 */
+.hero {
     width: 100%;
-    display: block;
+    height: 350px;
+    overflow: hidden;
 }
 
-/* 顶部导航区域 */
-.top-nav {
+.hero-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+/* 导航栏 */
+.nav-bar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
+    padding: 10px 40px;
+    background: #fff;
+    border-bottom: 1px solid #eee;
 }
 
 .logo {
     height: 50px;
+    margin-right: 20px;
 }
 
-.breadcrumbs {
-    font-size: 14px;
-    color: #666;
-}
-
-.search {
-    padding: 8px 10px;
-    width: 260px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-/* 主导航栏 */
-.main-menu {
-    display: flex;
-    gap: 30px;
-    padding: 12px 20px;
-    font-size: 15px;
-    border-bottom: 1px solid #eee;
-}
-
-.main-menu a {
-    color: black;
+.nav-links a {
+    margin-right: 20px;
     text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+.nav-links .active {
     font-weight: bold;
 }
 
-/* 产品列表布局 */
-.product-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-    padding: 20px;
+.search {
+    margin-left: auto;
+    padding: 6px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
 
+/* 产品展示容器 */
+.product-container {
+    width: 1100px;
+    margin: 30px auto;
+}
+
+/* 单个产品卡片 */
 .product-card {
-    border: 1px solid #eee;
-    border-radius: 6px;
+    display: inline-block;
+    width: 250px;
+    background: white;
+    margin: 15px;
     padding: 10px;
-    text-align: center;
+    border-radius: 6px;
+    border: 1px solid #eee;
+    vertical-align: top;
+    text-align: left;
 }
 
 .product-card img {
     width: 100%;
-    height: 260px;
-    object-fit: cover;
+    border-radius: 6px;
 }
 
-.product-card h3 {
+.product-name {
+    font-size: 15px;
+    margin: 10px 0 5px;
+}
+
+.price {
     font-size: 16px;
+    font-weight: bold;
+    color: #111;
 }
 
-.product-card p {
-    font-size: 14px;
-    color: #777;
-}
-
-.product-card button {
-    background-color: #ffcc00;
-    border: none;
-    padding: 10px;
+.add-cart {
+    background: #fbd400;
+    padding: 8px 10px;
     width: 100%;
+    text-align: center;
     margin-top: 10px;
     border-radius: 4px;
+    cursor: pointer;
 }
