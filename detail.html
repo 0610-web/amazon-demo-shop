@@ -6,36 +6,11 @@
     <title>产品详情 - 圣诞车库门装饰</title>
     <link rel="stylesheet" href="style.css?v=2">
     <style>
-        /* 详情页专属的简单样式 */
-        .detail-container {
-            max-width: 1000px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #fff;
-        }
-        .back-btn {
-            display: inline-block;
-            margin-bottom: 20px;
-            text-decoration: none;
-            color: #333;
-            font-size: 16px;
-        }
-        .detail-images {
-            display: flex;
-            flex-direction: column;
-            gap: 20px; /* 图片之间的间距 */
-            align-items: center;
-        }
-        .detail-images img {
-            max-width: 100%; /* 让图片适应屏幕宽度 */
-            border: 1px solid #eee;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .product-info {
-            margin-bottom: 30px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 20px;
-        }
+        .detail-container { max-width: 1000px; margin: 20px auto; padding: 20px; background: #fff; }
+        .back-btn { display: inline-block; margin-bottom: 20px; text-decoration: none; color: #333; font-size: 16px; }
+        .detail-images { display: flex; flex-direction: column; gap: 20px; align-items: center; }
+        .detail-images img { max-width: 100%; border: 1px solid #eee; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .product-info { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
     </style>
 </head>
 <body>
@@ -55,31 +30,23 @@
             <div class="price" style="font-size: 24px; color: #B12704;">$19.99</div>
         </div>
 
-        <div id="image-gallery" class="detail-images">
-            </div>
+        <div id="image-gallery" class="detail-images"></div>
     </main>
 
     <script>
-        // 1. 获取容器
         var gallery = document.getElementById('image-gallery');
-        
-        // 2. 设置路径 (跟你的文件夹结构完全匹配)
+        // 路径和你截图完全一致
         var folderPath = "assets/Christmas-Garage-Door-Decorations-Magnets/";
-        var filePrefix = "Christmas-garage-door"; // 注意没有数字，只有前缀
-        
+        var filePrefix = "Christmas-garage-door"; 
         var htmlContent = "";
 
-        // 3. 循环 1 到 8 生成图片
+        // 循环生成8张图
         for (var i = 1; i <= 8; i++) {
-            // ✅ 这里修复了只要数字不要 .jpg 的问题
+            // 拼接路径：文件夹 + 文件名 + 数字 + .jpg
             var fullPath = folderPath + filePrefix + i + ".jpg";
-            
             htmlContent += `<img src="${fullPath}" alt="Detail Image ${i}">`;
         }
-
-        // 4. 写入页面
         gallery.innerHTML = htmlContent;
     </script>
-
 </body>
 </html>
