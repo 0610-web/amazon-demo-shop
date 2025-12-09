@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Demo Amazon Store</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Products</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <div class="header">
-    <a href="index.html">Demo Amazon Shop</a>
-    <a href="cart.html">Cart 🛒</a>
-  </div>
+    <!-- 🔥 顶部横幅 Banner -->
+    <div class="top-banner">
+        <img src="assets/datu.jpg" alt="Top Banner" class="banner-img">
+    </div>
 
-  <div class="amazon-list" id="product-list"></div>
+    <!-- 🔥 顶部导航栏 + Logo -->
+    <header class="header">
+        <img src="assets/xialogo.jpg" alt="Logo" class="logo">
+        <h1 class="title">Christmas Product Collection</h1>
+    </header>
 
-  <script src="script.js"></script>
+    <!-- 🔥 产品列表 -->
+    <div class="product-list" id="product-list"></div>
+
+    <script src="products.json"></script>
+    <script src="script.js"></script>
+
 </body>
 </html>
