@@ -3,14 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>产品详情 - 圣诞车库门装饰</title>
+    <title>32PCS Christmas Garage Door Decorations</title>
     <link rel="stylesheet" href="style.css?v=2">
     <style>
-        .detail-container { max-width: 1000px; margin: 20px auto; padding: 20px; background: #fff; }
-        .back-btn { display: inline-block; margin-bottom: 20px; text-decoration: none; color: #333; font-size: 16px; }
-        .detail-images { display: flex; flex-direction: column; gap: 20px; align-items: center; }
-        .detail-images img { max-width: 100%; border: 1px solid #eee; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .product-info { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+        /* 页面整体布局 */
+        body {
+            background-color: #fff;
+        }
+        .detail-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            display: flex; /* 开启左右布局 */
+            gap: 40px;     /* 左右栏之间的间距 */
+        }
+
+        /* --- 左侧：图片区域 --- */
+        .image-gallery-section {
+            flex: 1; /* 左侧占1份宽度 */
+            display: flex;
+            flex-direction: column; /* 垂直排列：大图在上，小图在下 */
+            align-items: center;
+        }
+
+        /* 大图容器 */
+        .main-image-container {
+            width: 100%;
+            height: 500px; /* 固定高度，防止页面跳动 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #eee;
+            margin-bottom: 20px;
+        }
+        
+        .main-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain; /* 保持图片比例 */
+        }
+
+        /* 缩略图列表 */
+        .thumbnail-list {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .thumbnail-list img {
+            width: 60px;
+            height: 60px;
+            border: 1px solid #ccc;
+            cursor: pointer; /* 鼠标放上去变小手 */
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        
+        /* 鼠标悬停或选中时的样式 */
+        .thumbnail-list img:hover, .thumbnail-list img.active {
+            border: 2px solid #e77600; /* 亚马逊经典的橙色边框 */
+            box-shadow: 0 0 3px rgba(0,0,0,0.3);
+        }
+
+        /* --- 右侧：文字信息区域 --- */
+        .product-info-section {
+            flex: 1.2; /* 右侧稍微宽一点 */
+        }
+
+        h1 {
+            font-size: 24px;
+            line-height: 1.3;
+            color: #0F1111;
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+
+        .price-block {
+            margin: 15px 0;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            padding: 10px 0;
+        }
+
+        .current-price {
+            font-size: 28px;
+            color: #B12704; /* 亚马逊红 */
+            font-weight: 500;
+        }
+
+        .unit-price {
+            font-size: 14px;
+            color: #565959;
+            margin-left: 5px;
+        }
+
+        h3.about-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        ul.bullet-points {
+            padding-left: 20px;
+        }
+
+        ul.bullet-points li {
+            margin-bottom: 8px;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #0F1111;
+        }
+
+        /* 返回按钮样式微调 */
+        .back-link {
+            display: block;
+            margin-bottom: 15px;
+            color: #007185;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+            color: #c7511f;
+        }
     </style>
 </head>
 <body>
@@ -18,35 +134,86 @@
     <nav class="top-nav">
         <div class="container nav-container">
             <img src="assets/xiaologo.jpg" alt="Logo" class="nav-logo">
-            <a href="index.html" style="margin-left:auto; color: white; text-decoration: none;">返回首页</a>
         </div>
     </nav>
 
     <main class="detail-container">
-        <a href="index.html" class="back-btn">← Back to Results</a>
         
-        <div class="product-info">
-            <h1>Christmas Garage Door Decorations (8 Pcs Set)</h1>
-            <div class="price" style="font-size: 24px; color: #B12704;">$19.99</div>
+        <div class="image-gallery-section">
+            <a href="index.html" class="back-link">‹ Back to results</a>
+            
+            <div class="main-image-container">
+                <img id="main-display-img" src="" alt="Main Product Image">
+            </div>
+
+            <div id="thumbnail-container" class="thumbnail-list">
+                </div>
         </div>
 
-        <div id="image-gallery" class="detail-images"></div>
+        <div class="product-info-section">
+            <h1>32PCS Christmas Garage Door Decorations Magnets - Merry Xmas Ball Holiday Refrigerator Fridge Kitchen Decor(Red, Silver)</h1>
+            
+            <div class="price-block">
+                <span class="current-price">$19.99</span>
+                <span class="unit-price">$0.64 per count ($0.64 / count)</span>
+            </div>
+
+            <h3 class="about-title">About this item</h3>
+            <ul class="bullet-points">
+                <li><strong>Christmas Garage Door Decorations:</strong> Includes 32 magnets—13 Christmas ball magnets, 6 letter magnets spelling "Merry Christmas," and 13 bow rope magnets. Got U.S. copyright in 2023.</li>
+                <li><strong>Large size to visibly cover your garage door:</strong> Letter "Chr" is 9.3"*11.3", letter "m" magnet is 5.06”*5.1”. Christmas ball magnet is 6.5”*5.3”. Bow rope magnet is 5.9”*2.95”.</li>
+                <li><strong>Secure Magnetic Hold:</strong> Made with festive prints and a magnetic back; easy to remove without damaging the surface of your garage door.</li>
+                <li><strong>Versatile Application:</strong> Can be applied directly to any metal or magnetic surface; adjustable and removable without leaving residue, adding a festive touch to your garage door.</li>
+                <li><strong>Spread Holiday Cheer:</strong> Great for decorating garage doors, refrigerators, metal front doors, dry erase boards, cabinets, and more; bring holiday spirit to your neighborhood with these charming magnets.</li>
+            </ul>
+        </div>
+
     </main>
 
     <script>
-        var gallery = document.getElementById('image-gallery');
-        // 路径和你截图完全一致
+        // 1. 定义基础路径和文件前缀
         var folderPath = "assets/Christmas-Garage-Door-Decorations-Magnets/";
-        var filePrefix = "Christmas-garage-door"; 
-        var htmlContent = "";
+        var filePrefix = "Christmas-garage-door";
+        
+        // 获取页面元素
+        var mainImg = document.getElementById('main-display-img');
+        var thumbContainer = document.getElementById('thumbnail-container');
 
-        // 循环生成8张图
+        // 2. 初始化：默认显示第一张图
+        var firstImgPath = folderPath + filePrefix + "1.jpg";
+        mainImg.src = firstImgPath;
+
+        // 3. 循环生成缩略图 (1到8)
         for (var i = 1; i <= 8; i++) {
-            // 拼接路径：文件夹 + 文件名 + 数字 + .jpg
             var fullPath = folderPath + filePrefix + i + ".jpg";
-            htmlContent += `<img src="${fullPath}" alt="Detail Image ${i}">`;
+            
+            // 创建 img 标签
+            var thumbImg = document.createElement('img');
+            thumbImg.src = fullPath;
+            thumbImg.dataset.index = i; // 记录它是第几张
+
+            // 给缩略图添加点击事件
+            thumbImg.onclick = function() {
+                // A. 切换大图路径
+                mainImg.src = this.src;
+
+                // B. 处理边框样式（移除所有active，给当前点击的加active）
+                var allThumbs = thumbContainer.getElementsByTagName('img');
+                for(var j=0; j<allThumbs.length; j++) {
+                    allThumbs[j].classList.remove('active');
+                }
+                this.classList.add('active');
+            };
+
+            // 如果是第1张，默认高亮
+            if(i === 1) {
+                thumbImg.classList.add('active');
+            }
+
+            // 放入容器
+            thumbContainer.appendChild(thumbImg);
         }
-        gallery.innerHTML = htmlContent;
     </script>
+
 </body>
 </html>
