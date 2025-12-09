@@ -7,7 +7,7 @@ body {
     color: #0F1111;
 }
 
-/* === 统一的居中容器 === */
+/* 统一的居中容器 */
 .container {
     max-width: 1400px;
     margin: 0 auto;
@@ -15,7 +15,7 @@ body {
     padding-right: 20px;
 }
 
-/* === 1. 顶部导航栏样式 === */
+/* 1. 顶部导航栏样式 */
 .top-nav {
     border-bottom: 1px solid #ddd;
     padding: 10px 0;
@@ -55,22 +55,13 @@ body {
     width: 200px;
 }
 
-/* === 2. Banner 大图样式（【重点修改这里】） === */
+/* 2. Banner 区域 */
 .banner-section {
     width: 100%;
-    margin-top: 20px;
-}
-/* .banner-container 继承 .container 的居中属性 */
-
-.banner-image {
-    width: 100%;        /* 宽度占满容器 */
-    height: 250px;      /* 【修改点】强制固定高度为 250px，让它变得更扁 */
-    object-fit: cover;  /* 【关键】这一步会裁切图片多余的上下部分，保证不拉伸变形 */
-    display: block;
-    border-radius: 0px;
+    margin-top: 0px; /* 去掉顶部间隙 */
 }
 
-/* === 3. 产品列表网格 === */
+/* 3. 产品列表网格 */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
