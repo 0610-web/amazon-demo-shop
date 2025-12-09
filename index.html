@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Christmas Products</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo Shop</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-    <!-- 🔥 顶部横幅 Banner -->
-    <div class="top-banner">
-        <img src="assets/datu.jpg" alt="Top Banner" class="banner-img">
-    </div>
+<!-- 顶部横幅大图 -->
+<div class="top-banner">
+    <img src="assets/datu.jpg" class="banner-img" alt="banner" />
 
-    <!-- 🔥 顶部导航栏 + Logo -->
-    <header class="header">
-        <img src="assets/xialogo.jpg" alt="Logo" class="logo">
-        <h1 class="title">Christmas Product Collection</h1>
-    </header>
+    <!-- 左侧 logo -->
+    <img src="assets/xiaologo.jpg" class="banner-logo" alt="logo" />
+</div>
 
-    <!-- 🔥 产品列表 -->
-    <div class="product-list" id="product-list"></div>
+<!-- 导航栏 -->
+<nav class="navbar">
+    <a href="#">HOME</a>
+    <a href="#">CHRISTMAS PARTY</a>
+    <a href="#">FALL</a>
+    <a href="#">HALLOWEEN PARTY</a>
+</nav>
 
-    <script src="products.json"></script>
-    <script src="script.js"></script>
+<!-- 产品列表容器 -->
+<div class="product-list" id="product-list"></div>
 
+<script src="products.json"></script>
+<script src="script.js"></script>
 </body>
 </html>
