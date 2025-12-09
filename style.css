@@ -6,6 +6,7 @@ body {
     background-color: #ffffff;
     color: #0F1111;
 }
+a { text-decoration: none; color: inherit; }
 
 /* 统一的居中容器 */
 .container {
@@ -18,13 +19,16 @@ body {
 /* 1. 顶部导航栏样式 */
 .top-nav {
     border-bottom: 1px solid #ddd;
-    padding: 10px 0;
+    padding: 0;
     background: #fff;
+    position: relative;
+    z-index: 1000;
 }
 .nav-container {
     display: flex;
     align-items: center;
     gap: 30px;
+    height: 60px;
 }
 .nav-logo {
     height: 40px;
@@ -40,11 +44,64 @@ body {
     font-weight: 700;
     color: #444;
     cursor: pointer;
+    height: 100%;
+    align-items: center;
+}
+.nav-links li {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 .nav-links li:hover, .nav-links li.active {
     color: #007185;
     border-bottom: 2px solid #007185;
 }
+
+/* === 下拉菜单通用样式 === */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-top: none;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    width: 600px; /* 默认大菜单宽度 */
+    padding: 20px;
+    z-index: 999;
+    
+    /* 默认 3 列布局 */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 15px;
+}
+
+/* 【新增】针对小菜单的特殊样式 (OUTDOOR & SPORTS) */
+.dropdown-menu.small-menu {
+    width: 200px; /* 宽度改小 */
+    grid-template-columns: 1fr; /* 改为单列显示 */
+}
+
+/* 鼠标悬停显示 */
+.dropdown-item:hover .dropdown-menu {
+    display: grid;
+}
+
+/* 下拉菜单链接样式 */
+.dropdown-menu a {
+    font-size: 13px;
+    font-weight: 400;
+    color: #333;
+    padding: 5px;
+}
+.dropdown-menu a:hover {
+    color: #e47911;
+    text-decoration: underline;
+    background-color: #f7f7f7;
+}
+
+/* 搜索框 */
 .search-bar {
     margin-left: auto;
     border: 1px solid #ccc;
@@ -58,7 +115,7 @@ body {
 /* 2. Banner 区域 */
 .banner-section {
     width: 100%;
-    margin-top: 0px; /* 去掉顶部间隙 */
+    margin-top: 0px;
 }
 
 /* 3. 产品列表网格 */
