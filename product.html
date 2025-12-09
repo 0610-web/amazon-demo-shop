@@ -1,20 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product Details</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Party - Shop</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <div class="header">
-    <a href="index.html">Demo Amazon Shop</a>
-    <a href="cart.html">Cart 🛒</a>
-  </div>
+    <!-- 头图 -->
+    <div class="hero">
+        <img src="assets/datu.jpg" class="hero-img">
+    </div>
 
-  <div id="product-container"></div>
+    <!-- 导航栏 -->
+    <div class="nav-bar">
+        <img src="assets/xiaologo.jpg" class="logo">
+        <div class="nav-links">
+            <a href="index.html">HOME</a>
+            <a href="product.html" class="active">CHRISTMAS PARTY</a>
+        </div>
+        <input type="text" class="search" placeholder="Search...">
+    </div>
 
-  <script src="product.js"></script>
+    <!-- 产品容器 -->
+    <div class="product-container">
+
+        <!-- 产品循环渲染 -->
+        <div id="product-list"></div>
+
+    </div>
+
+    <script src="product.js"></script>
 </body>
 </html>
