@@ -1,4 +1,3 @@
-// 加载 products.json
 fetch('products.json')
   .then(res => res.json())
   .then(products => {
@@ -16,7 +15,7 @@ fetch('products.json')
         <div class="list-info">
           <h3>${p.title}</h3>
           <p class="price">$${p.price}</p>
-          <p>${p.description.substring(0, 60)}...</p>
+          <p>${p.description.substring(0, 50)}...</p>
         </div>
       `;
 
