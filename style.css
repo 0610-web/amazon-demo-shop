@@ -1,94 +1,141 @@
+/* 全局设置 */
 body {
+    font-family: "Amazon Ember", Arial, sans-serif;
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    background-color: #ffffff;
+    color: #0F1111;
 }
 
-/* 头图固定高度，不全屏 */
-.hero {
-    width: 100%;
-    height: 350px;
-    overflow: hidden;
+/* 1. 顶部导航栏样式 */
+.top-nav {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    background: #fff;
 }
-
-.hero-img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-}
-
-/* 导航栏 */
-.nav-bar {
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
-    padding: 10px 40px;
-    background: #fff;
-    border-bottom: 1px solid #eee;
+    padding: 0 20px;
+    gap: 30px;
 }
-
-.logo {
-    height: 50px;
-    margin-right: 20px;
+.nav-logo {
+    height: 40px; /* 限制 Logo 高度，防止太大约束 */
+    object-fit: contain;
 }
-
-.nav-links a {
-    margin-right: 20px;
-    text-decoration: none;
-    color: black;
-    font-size: 16px;
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+    font-weight: 700;
+    color: #444;
+    cursor: pointer;
 }
-
-.nav-links .active {
-    font-weight: bold;
+.nav-links li:hover, .nav-links li.active {
+    color: #007185; /* 亚马逊蓝 */
+    border-bottom: 2px solid #007185;
 }
-
-.search {
-    margin-left: auto;
-    padding: 6px 12px;
-    border: 1px solid #ddd;
+.search-bar {
+    margin-left: auto; /* 把搜索框推到最右边 */
+    border: 1px solid #ccc;
+    padding: 5px 10px;
     border-radius: 4px;
+    color: #777;
+    font-size: 13px;
+    width: 200px;
 }
 
-/* 产品展示容器 */
-.product-container {
-    width: 1100px;
-    margin: 30px auto;
+/* 2. Banner 大图样式 */
+.banner {
+    width: 100%;
+    overflow: hidden;
+}
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 3. 产品列表网格 */
+.product-grid {
+    display: grid;
+    /* 自动适应宽度，每列最小220px */
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
+    gap: 20px;
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 /* 单个产品卡片 */
 .product-card {
-    display: inline-block;
-    width: 250px;
-    background: white;
-    margin: 15px;
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #eee;
-    vertical-align: top;
-    text-align: left;
+    border: 1px solid #e7e7e7;
+    padding: 15px;
+    background: #fff;
+    border-radius: 0px; /* 亚马逊风格通常是直角或微圆角 */
 }
 
-.product-card img {
+/* 产品图片 */
+.image-box {
     width: 100%;
-    border-radius: 6px;
+    height: 220px; /* 固定高度确保整齐 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.image-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 
-.product-name {
-    font-size: 15px;
-    margin: 10px 0 5px;
-}
-
-.price {
+/* 标题 */
+.product-card h3 {
     font-size: 16px;
-    font-weight: bold;
-    color: #111;
+    font-weight: 400; /* 亚马逊标题通常不加粗 */
+    line-height: 1.3em;
+    height: 2.6em; /* 限制显示两行 */
+    overflow: hidden;
+    margin: 5px 0;
 }
 
-.add-cart {
-    background: #fbd400;
-    padding: 8px 10px;
+/* 评分和价格 */
+.rating {
+    color: #de7921;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+.price {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+.prime {
+    color: #00a8e1;
+    font-size: 13px;
+    font-weight: 800;
+    margin-left: 5px;
+}
+
+/* 购买按钮 (黄色) */
+button {
+    background-color: #FFD814;
+    border-color: #FCD200;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 20px;
+    padding: 6px 15px;
     width: 100%;
-    text-align: center;
-    margin-top: 10px;
-    border-radius: 4px;
     cursor: pointer;
+    font-size: 13px;
+    box-shadow: 0 2px 5px rgba(213,217,217,.5);
+}
+button:hover {
+    background-color: #F7CA00;
 }
