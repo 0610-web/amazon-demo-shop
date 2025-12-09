@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "title": "Christmas Ornament Magnet Set",
+    "price": 14.41,
+    "description": "Beautiful Christmas decorative magnets set for garage doors and refrigerators.",
+    "images": ["https://via.placeholder.com/300?text=Product+1"]
+  },
+  {
+    "id": 2,
+    "title": "Holiday Snowflake Decor Set",
+    "price": 12.99,
+    "description": "Snowflake themed decorative magnet set for winter home decoration.",
+    "images": ["https://via.placeholder.com/300?text=Product+2"]
+  },
+  {
+    "id": 3,
+    "title": "Santa Claus Magnet Pack",
+    "price": 15.99,
+    "description": "Cute Santa Claus magnets perfect for refrigerators and metal surfaces.",
+    "images": ["https://via.placeholder.com/300?text=Product+3"]
+  },
+  {
+    "id": 4,
+    "title": "Reindeer Holiday Magnet",
+    "price": 11.50,
+    "description": "Festive reindeer magnet for Christmas decoration.",
+    "images": ["https://via.placeholder.com/300?text=Product+4"]
+  },
+  {
+    "id": 5,
+    "title": "Christmas Bell Magnet",
+    "price": 10.99,
+    "description": "Classic Christmas bell magnet with shiny golden finish.",
+    "images": ["https://via.placeholder.com/300?text=Product+5"]
+  },
+  {
+    "id": 6,
+    "title": "Holiday Candy Cane Magnet",
+    "price": 9.99,
+    "description": "Striped candy cane magnet for kitchen and garage decoration.",
+    "images": ["https://via.placeholder.com/300?text=Product+6"]
+  },
+  {
+    "id": 7,
+    "title": "Christmas Tree Magnet",
+    "price": 13.49,
+    "description": "Green Christmas tree magnet with star topper.",
+    "images": ["https://via.placeholder.com/300?text=Product+7"]
+  },
+  {
+    "id": 8,
+    "title": "Holiday Gift Box Magnet",
+    "price": 12.49,
+    "description": "Cute red gift box magnet wrapped with a ribbon.",
+    "images": ["https://via.placeholder.com/300?text=Product+8"]
+  },
+  {
+    "id": 9,
+    "title": "Snowman Magnet Set",
+    "price": 13.99,
+    "description": "Smiling snowman magnet set, great for winter decoration.",
+    "images": ["https://via.placeholder.com/300?text=Product+9"]
+  },
+  {
+    "id": 10,
+    "title": "Holiday Star Magnet",
+    "price": 8.99,
+    "description": "Golden star magnet ideal for festive decoration.",
+    "images": ["https://via.placeholder.com/300?text=Product+10"]
+  },
+  {
+    "id": 11,
+    "title": "Christmas Stocking Magnet",
+    "price": 10.49,
+    "description": "Red stocking magnet to brighten your metal surfaces.",
+    "images": ["https://via.placeholder.com/300?text=Product+11"]
+  },
+  {
+    "id": 12,
+    "title": "Angel Christmas Magnet",
+    "price": 12.99,
+    "description": "Elegant angel magnet with golden wings.",
+    "images": ["https://via.placeholder.com/300?text=Product+12"]
+  },
+  {
+    "id": 13,
+    "title": "Christmas Wreath Magnet",
+    "price": 14.99,
+    "description": "Green wreath magnet with a bright red ribbon.",
+    "images": ["https://via.placeholder.com/300?text=Product+13"]
+  },
+  {
+    "id": 14,
+    "title": "Holiday Ribbon Magnet",
+    "price": 7.99,
+    "description": "Red ribbon magnet for festive home decoration.",
+    "images": ["https://via.placeholder.com/300?text=Product+14"]
+  },
+  {
+    "id": 15,
+    "title": "Gingerbread Man Magnet",
+    "price": 11.99,
+    "description": "Cute gingerbread man magnet for your kitchen.",
+    "images": ["https://via.placeholder.com/300?text=Product+15"]
+  },
+  {
+    "id": 16,
+    "title": "North Pole Sign Magnet",
+    "price": 9.49,
+    "description": "North Pole directional sign magnet decoration.",
+    "images": ["https://via.placeholder.com/300?text=Product+16"]
+  },
+  {
+    "id": 17,
+    "title": "Elf Christmas Magnet",
+    "price": 10.99,
+    "description": "Funny little elf magnet for festive decoration.",
+    "images": ["https://via.placeholder.com/300?text=Product+17"]
+  },
+  {
+    "id": 18,
+    "title": "Christmas Sleigh Magnet",
+    "price": 14.29,
+    "description": "Santa's sleigh themed festive magnet.",
+    "images": ["https://via.placeholder.com/300?text=Product+18"]
+  },
+  {
+    "id": 19,
+    "title": "Holiday Candle Magnet",
+    "price": 9.99,
+    "description": "Warm candle magnet for Christmas decor.",
+    "images": ["https://via.placeholder.com/300?text=Product+19"]
+  },
+  {
+    "id": 20,
+    "title": "Winter Village Magnet",
+    "price": 13.79,
+    "description": "Cozy winter village scene magnet for holiday decoration.",
+    "images": ["https://via.placeholder.com/300?text=Product+20"]
+  }
+]
