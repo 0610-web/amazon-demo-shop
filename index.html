@@ -1,53 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>90Shine Store</title>
+    <title>我的节日派对商店</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <div class="banner-container">
-        <img src="assets/datu.jpg" alt="Welcome Banner" class="top-banner">
-    </div>
-
-    <header class="site-header">
-        <div class="container header-wrapper">
+    <nav class="top-nav">
+        <div class="nav-container">
+            <img src="assets/xiaologo.jpg" alt="Logo" class="nav-logo">
             
-            <div class="logo">
-                <img src="assets/xiaologo.jpg" alt="90Shine Logo">
-            </div>
-
-            <div class="search-bar">
-                <select class="search-select">
-                    <option>All</option>
-                </select>
-                <input type="text" placeholder="Search all Life's Fun Start Here">
-                <button><i class="fas fa-search"></i></button>
-            </div>
-        </div>
-    </header>
-
-    <nav class="main-nav">
-        <div class="container">
-            <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">HOLIDAY MAGNET</a></li>
-                <li><a href="#" class="active">CHRISTMAS PARTY</a></li>
-                <li><a href="#">FALL</a></li>
-                <li><a href="#">HALLOWEEN PARTY</a></li>
-                <li><a href="#">MORE <i class="fas fa-caret-down"></i></a></li>
+            <ul class="nav-links">
+                <li>HOME</li>
+                <li>HOLIDAY MAGNET</li>
+                <li class="active">CHRISTMAS PARTY</li>
+                <li>HALLOWEEN PARTY</li>
+                <li>MORE ▾</li>
             </ul>
+            
+            <div class="search-bar">
+                Search all products... 🔍
+            </div>
         </div>
     </nav>
 
-    <main class="container">
-        <div id="product-grid" class="product-grid">
+    <header class="banner">
+        <img src="assets/datu.jpg" alt="Store Banner">
+    </header>
+
+    <main class="product-grid">
+        <div class="product-card">
+            <div class="image-box">
+                <img src="https://via.placeholder.com/300" alt="产品展示">
             </div>
+            <h3>90PCS Christmas Car Refrigerator Magnets</h3>
+            <div class="rating">★★★★★ 8,558</div>
+            <div class="price">$16.99 <span class="prime">✔prime</span></div>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <div class="image-box">
+                <img src="https://via.placeholder.com/300" alt="产品展示">
+            </div>
+            <h3>43PCS Christmas Gnome Magnets</h3>
+            <div class="rating">★★★★★ 8,558</div>
+            <div class="price">$15.99 <span class="prime">✔prime</span></div>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <div class="image-box">
+                <img src="https://via.placeholder.com/300" alt="产品展示">
+            </div>
+            <h3>314PCS Christmas Decorations</h3>
+            <div class="rating">★★★★☆ 1,897</div>
+            <div class="price">$19.99 <span class="prime">✔prime</span></div>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <div class="image-box">
+                <img src="https://via.placeholder.com/300" alt="产品展示">
+            </div>
+            <h3>Roll The Dice Gift Exchange Game</h3>
+            <div class="rating">★★★★☆ 339</div>
+            <div class="price">$11.99 <span class="prime">✔prime</span></div>
+            <button>Add to Cart</button>
+        </div>
     </main>
 
-    <script src="script.js"></script>
 </body>
 </html>
