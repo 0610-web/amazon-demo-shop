@@ -1,50 +1,95 @@
-/* 产品列表容器 - 使用网格布局 */
-.amazon-list {
-  width: 95%;
-  max-width: 1300px;
-  margin: 20px auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
+/* ================= */
+/* 🔥 全局样式 */
+/* ================= */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+
+/* ================= */
+/* 🔥 顶部横幅 Banner */
+/* ================= */
+.top-banner {
+    width: 100%;
+    overflow: hidden;
+}
+
+.banner-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ================= */
+/* 🔥 顶部导航栏 Logo */
+/* ================= */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    height: 60px;
+    margin-right: 20px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #444;
+}
+
+/* ================= */
+/* 🔥 产品列表布局 */
+/* ================= */
+.product-list {
+    width: 95%;
+    max-width: 1000px;
+    margin: 20px auto;
 }
 
 /* 产品卡片 */
-.list-item {
-  background: white;
-  border: 1px solid #ddd;
-  padding: 15px;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: 0.2s;
-}
-
-.list-item:hover {
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+.product-card {
+    display: flex;
+    background: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
 }
 
 /* 产品图片 */
-.list-img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 6px;
-  background: #f4f4f4;
+.product-card img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 15px;
 }
 
-/* 产品卡片内容 */
-.list-info h3 {
-  margin: 10px 0 5px 0;
-  font-size: 16px;
+/* 产品文字 */
+.product-info {
+    flex: 1;
 }
 
-.price {
-  color: #b12704;
-  font-weight: bold;
-  margin-bottom: 5px;
-  font-size: 18px;
+.product-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
 }
 
-.list-info p {
-  color: #555;
-  font-size: 14px;
+.product-price {
+    color: #d32f2f;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-desc {
+    color: #555;
+    line-height: 1.4;
 }
