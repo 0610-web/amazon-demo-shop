@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Details</title>
-    <link rel="stylesheet" href="style.css?v=3"> 
+    <link rel="stylesheet" href="style.css?v=6"> 
     <style>
         body { margin: 0; padding: 0; font-family: "Amazon Ember", Arial, sans-serif; background-color: #fff; }
         .detail-container { max-width: 1500px; margin: 20px auto; padding: 20px; display: flex; flex-direction: row; gap: 30px; align-items: flex-start; }
@@ -156,20 +156,25 @@
         // 2. 页面加载逻辑
         // ==========================================
         window.onload = function() {
+            // 获取 URL 里的 ID (例如 ?id=2)
             const urlParams = new URLSearchParams(window.location.search);
-            const productId = urlParams.get('id') || "1"; 
+            const productId = urlParams.get('id') || "1"; // 默认显示 ID 1
 
+            // 查找数据
             const product = products[productId];
 
+            // 你的截图显示的错误就是因为跑到了这一步，因为找不到 product
             if (!product) {
                 document.querySelector('.product-info-section').innerHTML = "<h1>Product Not Found (ID: " + productId + ")</h1>";
                 return;
             }
 
+            // A. 填充标题和价格
             document.getElementById('product-title').innerText = product.title;
             document.getElementById('product-price').innerText = "$" + product.price;
             document.getElementById('buy-box-price').innerText = "$" + product.price;
 
+            // B. 填充描述 (列表)
             const descList = document.getElementById('product-desc');
             descList.innerHTML = ""; 
             product.desc.forEach(text => {
@@ -178,13 +183,16 @@
                 descList.appendChild(li);
             });
 
+            // C. 填充图片
             const mainImg = document.getElementById('main-display-img');
             const thumbContainer = document.getElementById('thumbnail-container');
             
+            // 默认显示第一张
             if (product.images.length > 0) {
                 mainImg.src = product.images[0];
             }
 
+            // 生成缩略图
             thumbContainer.innerHTML = ""; 
             product.images.forEach((imgSrc, index) => {
                 let thumb = document.createElement('img');
