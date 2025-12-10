@@ -86,7 +86,7 @@
 
     <script>
         // ==========================================
-        // 1. 产品数据库 (这里定义你的所有产品)
+        // 1. 产品数据库 (包含产品1, 2, 3)
         // ==========================================
         const products = {
             // --- 产品 1 (车库门贴) ---
@@ -109,7 +109,7 @@
                 ]
             },
 
-            // --- 产品 2 (汽车冰箱贴) ---
+            // --- 产品 2 (90PCS 车贴) ---
             "2": {
                 title: "90PCS Christmas Car Refrigerator Decorations - 42 Reflective Bulb Light Shaped Magnets 48 Magnetic Wires Ornaments Set Xmas Holiday Cute Decor",
                 price: 16.99,
@@ -128,18 +128,37 @@
                     "High Quality Material: Made of reflective film and magnetic back, durable and suitable for all weather conditions.",
                     "Wide Application: Perfect for cars, refrigerators, mailboxes, garage doors, and any metal surface."
                 ]
+            },
+
+            // --- 产品 3 (新增: 43PCS 矮人车贴) ---
+            "3": {
+                title: "43PCS Christmas Car Refrigerator Decorations - Reflective Bulb Light Gnome Magnet Accessories Set Xmas Holiday Cute Decor",
+                price: 14.99,
+                images: [
+                    "assets/43PCS-Christmas-Car-Refrigerator-Decoration/0.jpg",
+                    "assets/43PCS-Christmas-Car-Refrigerator-Decoration/1.jpg",
+                    "assets/43PCS-Christmas-Car-Refrigerator-Decoration/2.jpg",
+                    "assets/43PCS-Christmas-Car-Refrigerator-Decoration/3.jpg",
+                    "assets/43PCS-Christmas-Car-Refrigerator-Decoration/4.jpg",
+                    "assets/43PCS-Christmas-Car-Refrigerator-Decoration/5.jpg",
+                    "assets/43PCS-Christmas-Car-Refrigerator-Decoration/6.jpg"
+                ],
+                desc: [
+                    "43PCS Value Set: Features adorable Gnome magnets and colorful bulb lights for a festive holiday look.",
+                    "Reflective Material: Designed to reflect light at night, making your car or fridge stand out.",
+                    "Cute Gnome Design: Adds a whimsical and cheerful touch to your Christmas decorations.",
+                    "Multi-Surface Use: Strong magnets adhere easily to cars, fridges, metal doors, and mailboxes."
+                ]
             }
         };
 
         // ==========================================
-        // 2. 页面加载逻辑 (自动填充数据)
+        // 2. 页面加载逻辑
         // ==========================================
         window.onload = function() {
-            // 获取 URL 里的 ID (例如 ?id=2)
             const urlParams = new URLSearchParams(window.location.search);
-            const productId = urlParams.get('id') || "1"; // 默认显示 ID 1
+            const productId = urlParams.get('id') || "1"; 
 
-            // 查找数据
             const product = products[productId];
 
             if (!product) {
@@ -147,12 +166,10 @@
                 return;
             }
 
-            // A. 填充标题和价格
             document.getElementById('product-title').innerText = product.title;
             document.getElementById('product-price').innerText = "$" + product.price;
             document.getElementById('buy-box-price').innerText = "$" + product.price;
 
-            // B. 填充描述 (列表)
             const descList = document.getElementById('product-desc');
             descList.innerHTML = ""; 
             product.desc.forEach(text => {
@@ -161,16 +178,13 @@
                 descList.appendChild(li);
             });
 
-            // C. 填充图片
             const mainImg = document.getElementById('main-display-img');
             const thumbContainer = document.getElementById('thumbnail-container');
             
-            // 默认显示第一张
             if (product.images.length > 0) {
                 mainImg.src = product.images[0];
             }
 
-            // 生成缩略图
             thumbContainer.innerHTML = ""; 
             product.images.forEach((imgSrc, index) => {
                 let thumb = document.createElement('img');
@@ -196,18 +210,16 @@
         }
 
         function buyNow() {
-            // 这一步是关键：把当前页面看到的内容存进浏览器缓存
             var currentImg = document.getElementById('main-display-img').src;
             var currentTitle = document.getElementById('product-title').innerText;
             var currentPrice = document.getElementById('product-price').innerText;
-            var currentQty = document.getElementById('qty').value;
+            var currentQty = document.getElementById("qty").value;
 
             localStorage.setItem('checkoutImg', currentImg);
             localStorage.setItem('checkoutTitle', currentTitle);
             localStorage.setItem('checkoutPrice', currentPrice);
             localStorage.setItem('checkoutQty', currentQty);
 
-            // 跳转到通用的 cart.html
             window.location.href = 'cart.html';
         }
     </script>
