@@ -68,12 +68,11 @@
                     <div style="font-size: 12px; color: #565959;">Sold by 90shine</div>
 
                     <div class="cart-controls">
-                        <span class="qty-box">Qty: 1</span>
+                        <span class="qty-box" id="display-qty">Qty: 1</span>
                         <a href="#" class="action-link">Delete</a>
                         <a href="#" class="action-link">Save for later</a>
                     </div>
                 </div>
-
                 </div>
         </div>
 
@@ -86,7 +85,7 @@
             <div>
                 <h3 class="summary-title">Order Summary</h3>
                 <div class="summary-row">
-                    <span>Subtotal (1 Item)</span>
+                    <span id="summary-subtotal-text">Subtotal (1 Item)</span>
                     <span id="summary-subtotal">$0.00</span>
                 </div>
                 <div class="summary-row">
@@ -118,18 +117,43 @@
         window.onload = function() {
             var imgSrc = localStorage.getItem('checkoutImg');
             var title = localStorage.getItem('checkoutTitle');
-            var price = localStorage.getItem('checkoutPrice');
+            var priceStr = localStorage.getItem('checkoutPrice'); // 比如 "$18.99"
+            var qtyStr = localStorage.getItem('checkoutQty');     // 比如 "3"
 
+            // 1. 设置图片和标题
             if (imgSrc) document.getElementById('cart-item-img').src = imgSrc;
             else document.getElementById('cart-item-img').alt = "No Item Selected";
 
             if (title) document.getElementById('cart-item-title').innerText = title;
 
-            if (price) {
-                document.getElementById('cart-item-price').innerText = price;
-                document.getElementById('summary-subtotal').innerText = price;
-                document.getElementById('summary-total').innerText = price;
+            // 2. 价格和数量计算逻辑
+            var unitPrice = 0.00;
+            var qty = 1;
+
+            if (priceStr) {
+                // 去掉 '$' 符号并转为数字
+                unitPrice = parseFloat(priceStr.replace('$', ''));
+                document.getElementById('cart-item-price').innerText = priceStr; // 单价保持原样显示
             }
+
+            if (qtyStr) {
+                qty = parseInt(qtyStr);
+            }
+
+            // 更新数量显示框
+            document.getElementById('display-qty').innerText = "Qty: " + qty;
+
+            // 计算总价
+            var total = unitPrice * qty;
+            var totalStr = "$" + total.toFixed(2); // 保留两位小数，例如 "56.97"
+
+            // 3. 更新右侧 Summary 区域
+            document.getElementById('summary-subtotal').innerText = totalStr;
+            document.getElementById('summary-total').innerText = totalStr;
+            
+            // 更新 Subtotal 文本 (例如: "Subtotal (3 Items)")
+            var itemText = qty > 1 ? "Items" : "Item";
+            document.getElementById('summary-subtotal-text').innerText = "Subtotal (" + qty + " " + itemText + ")";
         };
     </script>
 
