@@ -6,18 +6,17 @@
     <title>我的节日派对商店</title>
     <link rel="stylesheet" href="style.css?v=3">
     <style>
-        /* 为了配合这次修改，我增加了一点内联样式，确保菜单变宽 */
-        /* 你也可以把这些样式稍后移到 style.css 里 */
+        /* 针对大菜单的样式 (让菜单分列显示) */
         .mega-menu {
-            min-width: 700px !important; /* 让菜单足够宽，能放下一排多个词 */
+            min-width: 700px !important; 
             padding: 20px !important;
-            left: -100px !important; /*稍微往左偏一点，防止超出屏幕 */
+            left: -100px !important; 
         }
         
         .menu-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 分成3列显示 */
-            gap: 15px; /* 间距 */
+            grid-template-columns: repeat(3, 1fr); /* 3列布局 */
+            gap: 15px; 
         }
 
         .menu-grid a {
@@ -46,25 +45,31 @@
                     <span class="dropdown-trigger">HOLIDAY MAGNET ▾</span>
                     <div class="dropdown-menu mega-menu">
                         <div class="menu-grid">
-                            <a href="#">Kitchen Appliances</a>
-                            <a href="#">Household Appliances</a>
-                            <a href="#">Appliance Parts</a>
-                            <a href="#">Robot Vacuums Accessories</a>
-                            <a href="#">Cookware & Accessories</a>
-                            <a href="#">Teaware Sets</a>
+                            <div>
+                                <a href="#">Kitchen Appliances</a>
+                                <a href="#">Household Appliances</a>
+                                <a href="#">Appliance Parts</a>
+                                <a href="#">Robot Vacuums Accessories</a>
+                                <a href="#">Cookware & Accessories</a>
+                                <a href="#">Teaware Sets</a>
+                            </div>
                             
-                            <a href="#">Household Articles</a>
-                            <a href="#">Rain Gear</a>
-                            <a href="#">Bathroom Supplies</a>
-                            <a href="#">Thermometer</a>
-                            <a href="#">Furnitures</a>
-                            <a href="#">Home Textile</a>
+                            <div>
+                                <a href="#">Household Articles</a>
+                                <a href="#">Rain Gear</a>
+                                <a href="#">Bathroom Supplies</a>
+                                <a href="#">Thermometer</a>
+                                <a href="#">Furnitures</a>
+                                <a href="#">Home Textile</a>
+                            </div>
 
-                            <a href="#">Baby Products</a>
-                            <a href="#">Health Care</a>
-                            <a href="#">Indoor Lighting</a>
-                            <a href="#">Outdoor Lighting</a>
-                            <a href="#">Hand Operated Tools</a>
+                            <div>
+                                <a href="#">Baby Products</a>
+                                <a href="#">Health Care</a>
+                                <a href="#">Indoor Lighting</a>
+                                <a href="#">Outdoor Lighting</a>
+                                <a href="#">Hand Operated Tools</a>
+                            </div>
                         </div>
                     </div>
                 </li>
@@ -83,7 +88,7 @@
                 <li class="dropdown-item">
                     <span class="dropdown-trigger">MORE ▾</span>
                     <div class="dropdown-menu">
-                        <a href="#">About Us</a>
+                        <a href="about.html">About Us</a>
                         <a href="#">Contact Support</a>
                     </div>
                 </li>
