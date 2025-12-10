@@ -25,6 +25,7 @@
         .qty-box { background: #f0f2f2; border: 1px solid #d5d9d9; padding: 5px 10px; border-radius: 4px; box-shadow: 0 1px 2px rgba(15,17,17,.15) inset;}
         .action-link { color: #007185; text-decoration: none; font-size: 12px; margin-left: 10px; }
         .action-link:hover { text-decoration: underline; color: #c45500; }
+        /* 这里的 shipping-option 样式虽然保留了类名，但 HTML 中已被删除 */
         .shipping-option { margin-left: auto; font-size: 14px; color: #333; min-width: 200px; }
         .cart-right { flex: 0 0 300px; }
         .promo-code-box { display: flex; justify-content: space-between; margin-bottom: 20px; font-size: 14px; padding: 10px; border: 1px solid #ddd; border-radius: 4px;}
@@ -36,7 +37,7 @@
         .checkout-btn { width: 100%; background: #007185; color: white; border: none; padding: 10px; border-radius: 20px; margin-top: 10px; cursor: pointer; font-size: 14px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
         .checkout-btn:hover { background: #005a6a; }
         .payment-icons { margin-top: 15px; text-align: center; color: #999; font-size: 20px; letter-spacing: 5px;}
-        @media (max-width: 768px) { .cart-container { flex-direction: column; } .cart-item { flex-direction: column; } .shipping-option { margin-left: 0; margin-top: 10px; } }
+        @media (max-width: 768px) { .cart-container { flex-direction: column; } .cart-item { flex-direction: column; } }
     </style>
 </head>
 
@@ -73,6 +74,7 @@
                         <a href="#" class="action-link">Save for later</a>
                     </div>
                 </div>
+
                 </div>
         </div>
 
@@ -133,11 +135,11 @@
             if (priceStr) {
                 // 去掉 '$' 符号并转为数字
                 unitPrice = parseFloat(priceStr.replace('$', ''));
-                document.getElementById('cart-item-price').innerText = priceStr; // 单价保持原样显示
+                document.getElementById('cart-item-price').innerText = priceStr; // 列表页显示单价
             }
 
             if (qtyStr) {
-                qty = parseInt(qtyStr);
+                qty = parseInt(qtyStr); // 转换数量为整数
             }
 
             // 更新数量显示框
@@ -147,7 +149,7 @@
             var total = unitPrice * qty;
             var totalStr = "$" + total.toFixed(2); // 保留两位小数，例如 "56.97"
 
-            // 3. 更新右侧 Summary 区域
+            // 3. 更新右侧 Summary 区域的总价
             document.getElementById('summary-subtotal').innerText = totalStr;
             document.getElementById('summary-total').innerText = totalStr;
             
