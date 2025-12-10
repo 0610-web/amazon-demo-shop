@@ -257,16 +257,23 @@
             "10": {
                 title: "32PCS Christmas Garage Door Decorations Magnets - Merry Xmas Ball Holiday Refrigerator Fridge Kitchen Decor(Red, White)",
                 price: 18.99,
+                // 我在这里增加了图片路径，确保能读取到 0.jpg 到 6.jpg (一共7张)
+                // 如果你的文件夹里没有这么多图，网页上会显示空的，删除多余的行即可。
                 images: [
                     "assets/32PCS-Christmas-Garage-Door/0.jpg",
                     "assets/32PCS-Christmas-Garage-Door/1.jpg",
-                    "assets/32PCS-Christmas-Garage-Door/2.jpg"
+                    "assets/32PCS-Christmas-Garage-Door/2.jpg",
+                    "assets/32PCS-Christmas-Garage-Door/3.jpg",
+                    "assets/32PCS-Christmas-Garage-Door/4.jpg",
+                    "assets/32PCS-Christmas-Garage-Door/5.jpg",
+                    "assets/32PCS-Christmas-Garage-Door/6.jpg"
                 ],
                 desc: [
-                    "32PCS Set: Complete set of magnetic decorations for a full garage door makeover.",
-                    "Classic Red & White Theme: Features 'Merry Xmas' letters and decorative holiday balls.",
-                    "Magnetic & Reusable: Easy to apply, remove, and reuse for next year.",
-                    "Versatile Decor: Perfect for garage doors, refrigerators, metal doors, or school lockers."
+                    "Christmas garage door decorations: You will get 13 christmas ball magnets. 6 letter magnets including merry christmas. 13 bow rope magnets. Total is 32 magnets.",
+                    "Large size to visibly cover your garage door: Letter 'Chr' is 9.3\"*11.3\", letter 'm' magnet is 5.06”*5.1”. Christmas ball magnet is 6.5”*5.3”. Bow rope magnet is 5.9”*2.95”.",
+                    "Strong magnetic hold: They are made of festive printing and magnetic back. They are easily removable and will not hurt the surface of your garage door.",
+                    "Directly adsorb on any metal or magnetic surface: They are adjustable and removable, leaving no residue. Super cute and festive for the holidays.",
+                    "Share holiday joys to your neighbors with these holiday magnets: Great for your garage door, refrigerator, metal front door, dry eraser board, cabinets&more. Dress up your garage door with these cute magnets to make it more spirited this winter."
                 ]
             }
         };
@@ -308,6 +315,11 @@
             product.images.forEach((imgSrc, index) => {
                 let thumb = document.createElement('img');
                 thumb.src = imgSrc;
+                // 添加 onerror 处理，如果图片不存在，自动隐藏该缩略图，防止显示裂开的图标
+                thumb.onerror = function() {
+                    this.style.display = 'none';
+                };
+
                 if (index === 0) thumb.classList.add('active');
                 
                 thumb.onclick = function() {
