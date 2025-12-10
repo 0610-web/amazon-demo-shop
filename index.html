@@ -3,33 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>90shine-Life's Fun Starts Here</title>
+    <title>我的节日派对商店</title>
     <link rel="stylesheet" href="style.css?v=3">
     <style>
-        /* 针对大菜单的样式 */
-        .mega-menu {
-            min-width: 700px !important; 
-            padding: 20px !important;
-            left: -100px !important; 
-        }
-        
-        .menu-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); 
-            gap: 15px; 
-        }
-
-        .menu-grid a {
-            font-size: 13px;
-            color: #333;
-            text-decoration: none;
-            display: block;
-            padding: 5px 0;
-        }
-        .menu-grid a:hover {
-            color: #e77600;
-            text-decoration: underline;
-        }
+        .mega-menu { min-width: 700px !important; padding: 20px !important; left: -100px !important; }
+        .menu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+        .menu-grid a { font-size: 13px; color: #333; text-decoration: none; display: block; padding: 5px 0; }
+        .menu-grid a:hover { color: #e77600; text-decoration: underline; }
     </style>
 </head>
 <body>
@@ -37,64 +17,21 @@
     <nav class="top-nav">
         <div class="container nav-container">
             <img src="assets/xiaologo.jpg" alt="Logo" class="nav-logo">
-            
             <ul class="nav-links">
                 <li><a href="index.html">HOME</a></li>
-                
                 <li class="dropdown-item">
                     <span class="dropdown-trigger">HOLIDAY MAGNET ▾</span>
                     <div class="dropdown-menu mega-menu">
                         <div class="menu-grid">
-                            <div>
-                                <a href="#">Kitchen Appliances</a>
-                                <a href="#">Household Appliances</a>
-                                <a href="#">Appliance Parts</a>
-                                <a href="#">Robot Vacuums Accessories</a>
-                                <a href="#">Cookware & Accessories</a>
-                                <a href="#">Teaware Sets</a>
-                            </div>
-                            
-                            <div>
-                                <a href="#">Household Articles</a>
-                                <a href="#">Rain Gear</a>
-                                <a href="#">Bathroom Supplies</a>
-                                <a href="#">Thermometer</a>
-                                <a href="#">Furnitures</a>
-                                <a href="#">Home Textile</a>
-                            </div>
-
-                            <div>
-                                <a href="#">Baby Products</a>
-                                <a href="#">Health Care</a>
-                                <a href="#">Indoor Lighting</a>
-                                <a href="#">Outdoor Lighting</a>
-                                <a href="#">Hand Operated Tools</a>
-                            </div>
+                            <div><a href="#">Kitchen Appliances</a><a href="#">Household Appliances</a></div>
+                            <div><a href="#">Household Articles</a><a href="#">Rain Gear</a></div>
+                            <div><a href="#">Baby Products</a><a href="#">Health Care</a></div>
                         </div>
                     </div>
                 </li>
-
-                <li class="dropdown-item">
-                    <span class="dropdown-trigger" style="color: #c45500;">OUTDOOR & SPORTS ▾</span>
-                    <div class="dropdown-menu small-menu">
-                        <a href="#">Camping</a>
-                        <a href="#">Hiking</a>
-                    </div>
-                </li>
-
                 <li class="active">CHRISTMAS PARTY</li>
-                <li>HALLOWEEN PARTY</li>
-
                 <li><a href="about.html">ABOUT US</a></li>
-                
-                <li class="dropdown-item">
-                    <span class="dropdown-trigger">MORE ▾</span>
-                    <div class="dropdown-menu">
-                        <a href="#">Contact Support</a>
-                    </div>
-                </li>
             </ul>
-            
             <div class="search-bar">Search all products... 🔍</div>
         </div>
     </nav>
@@ -109,43 +46,53 @@
         
         <div class="product-card">
             <div class="image-box">
-                <a href="product.html">
+                <a href="product.html?id=1">
                     <img src="assets/Christmas-Garage-Door-Decorations-Magnets/Christmas-garage-door1.jpg" alt="Garage Door Decor">
                 </a>
             </div>
-            <h3><a href="product.html" style="text-decoration:none; color:inherit;">Christmas Garage Door Decorations</a></h3>
+            <h3><a href="product.html?id=1" style="text-decoration:none; color:inherit;">Christmas Garage Door Decorations</a></h3>
             <div class="price">$18.99 <span class="prime">✔prime</span></div>
-            <button onclick="window.location.href='product.html'">View Details</button>
+            <button onclick="window.location.href='product.html?id=1'">View Details</button>
         </div>
 
         <div class="product-card">
             <div class="image-box">
-                <img src="https://via.placeholder.com/300x300" alt="产品展示">
+                <a href="product.html?id=2">
+                    <img src="https://via.placeholder.com/300x300?text=Gnome+Magnet" alt="Gnome Magnets">
+                </a>
             </div>
-            <h3>43PCS Christmas Gnome Magnets</h3>
+            <h3><a href="product.html?id=2" style="text-decoration:none; color:inherit;">43PCS Christmas Gnome Magnets</a></h3>
             <div class="price">$15.99 <span class="prime">✔prime</span></div>
-            <button>Add to Cart</button>
+            <button onclick="window.location.href='product.html?id=2'">View Details</button>
         </div>
 
         <div class="product-card">
             <div class="image-box">
-                <img src="https://via.placeholder.com/300x300" alt="产品展示">
+                <a href="product.html?id=3">
+                    <img src="https://via.placeholder.com/300x300?text=314PCS+Decor" alt="Christmas Decorations">
+                </a>
             </div>
-            <h3>314PCS Christmas Decorations</h3>
+            <h3><a href="product.html?id=3" style="text-decoration:none; color:inherit;">314PCS Christmas Decorations</a></h3>
             <div class="price">$19.99 <span class="prime">✔prime</span></div>
-            <button>Add to Cart</button>
+            <button onclick="window.location.href='product.html?id=3'">View Details</button>
         </div>
 
         <div class="product-card">
             <div class="image-box">
-                <img src="https://via.placeholder.com/300x300" alt="产品展示">
+                <a href="product.html?id=4">
+                    <img src="https://via.placeholder.com/300x300?text=Dice+Game" alt="Gift Game">
+                </a>
             </div>
-            <h3>Roll The Dice Gift Exchange Game</h3>
+            <h3><a href="product.html?id=4" style="text-decoration:none; color:inherit;">Roll The Dice Gift Exchange Game</a></h3>
             <div class="price">$11.99 <span class="prime">✔prime</span></div>
-            <button>Add to Cart</button>
+            <button onclick="window.location.href='product.html?id=4'">View Details</button>
         </div>
 
     </main>
+
+    <div style="text-align: center; margin-top: 50px; padding-bottom: 20px; color: #999; font-size: 12px;">
+        &copy; 2024 90shine Party Shop. All rights reserved.
+    </div>
 
 </body>
 </html>
