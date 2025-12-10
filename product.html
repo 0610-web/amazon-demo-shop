@@ -120,7 +120,7 @@
             <h1 id="product-title">32PCS Christmas Garage Door Decorations Magnets - Merry Xmas Ball Holiday Refrigerator Fridge Kitchen Decor(Red, Silver)</h1>
             
             <div class="price-block">
-                <span class="current-price" id="product-price">$19.99</span>
+                <span class="current-price" id="product-price">$18.99</span>
             </div>
 
             <h3 class="about-title">About this item</h3>
@@ -133,7 +133,7 @@
         </div>
 
         <div class="buy-box">
-            <span class="buy-price">$19.99</span>
+            <span class="buy-price">$18.99</span>
             <div style="font-size: 14px; color: #007600; margin-bottom: 10px;">In Stock</div>
             
             <label for="qty" style="font-size: 13px;">Qty:</label>
@@ -189,11 +189,13 @@
             var currentImg = document.getElementById('main-display-img').src;
             var currentTitle = document.getElementById('product-title').innerText;
             var currentPrice = document.getElementById('product-price').innerText;
+            var currentQty = document.getElementById('qty').value; // 获取选择的数量
             
             // 存数据
             localStorage.setItem('checkoutImg', currentImg);
             localStorage.setItem('checkoutTitle', currentTitle);
             localStorage.setItem('checkoutPrice', currentPrice);
+            localStorage.setItem('checkoutQty', currentQty); // 新增：保存数量
 
             // 跳转
             window.location.href = 'cart.html';
