@@ -48,7 +48,7 @@
         .bullet-points { padding-left: 20px; }
         .bullet-points li { margin-bottom: 8px; font-size: 14px; line-height: 1.4; color: #333; }
 
-        /* 右侧：购买框 */
+        /* 右侧：购买框 (Buy Box) */
         .buy-box {
             flex: 0 0 250px; 
             border: 1px solid #d5d9d9;
@@ -76,8 +76,8 @@
             text-align: center;
         }
         .add-to-cart-btn:hover { background-color: #f7ca00; }
-        
-        /* Buy Now 按钮样式 */
+
+        /* 专门给 Buy Now 按钮加的样式 */
         .buy-now-btn {
             background-color: #fa8900; 
             border-color: #ca6d00; 
@@ -85,6 +85,7 @@
         }
         .buy-now-btn:hover { background-color: #e37b00; }
 
+        /* 顶部导航 */
         .top-nav { background: #131921; padding: 10px 0; margin-bottom: 20px; }
         .nav-container { max-width: 1400px; margin: 0 auto; display: flex; align-items: center; padding: 0 20px; }
         .nav-logo { height: 30px; object-fit: contain; }
@@ -145,7 +146,6 @@
             </select>
 
             <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
-            
             <button class="add-to-cart-btn buy-now-btn" onclick="buyNow()">Buy Now</button>
             
             </div>
@@ -190,10 +190,12 @@
             var currentTitle = document.getElementById('product-title').innerText;
             var currentPrice = document.getElementById('product-price').innerText;
             
+            // 存数据
             localStorage.setItem('checkoutImg', currentImg);
             localStorage.setItem('checkoutTitle', currentTitle);
             localStorage.setItem('checkoutPrice', currentPrice);
 
+            // 跳转
             window.location.href = 'cart.html';
         }
     </script>
