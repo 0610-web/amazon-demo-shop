@@ -54,14 +54,13 @@
         .action-link:hover { text-decoration: underline; color: #c45500; }
 
         .shipping-option { margin-left: auto; font-size: 14px; color: #333; min-width: 200px; }
-        .shipping-date { color: #007600; font-weight: bold; }
-
+        
         /* --- 右侧：结算框 (Order Summary) --- */
         .cart-right { flex: 0 0 300px; }
         
         .promo-code-box { display: flex; justify-content: space-between; margin-bottom: 20px; font-size: 14px; padding: 10px; border: 1px solid #ddd; border-radius: 4px;}
         
-        .summary-box { background: #f3f3f3; padding: 20px; border-radius: 4px; } /* 稍微给个背景色区分 */
+        .summary-box { background: #f3f3f3; padding: 20px; border-radius: 4px; }
         .summary-title { font-size: 18px; font-weight: bold; margin-bottom: 15px; margin-top: 0;}
 
         .summary-row { display: flex; justify-content: space-between; margin-bottom: 5px; font-size: 14px; color: #333; }
@@ -132,8 +131,7 @@
                 <div class="shipping-option">
                     <input type="radio" checked> 
                     <strong>Shipping</strong><br>
-                    <span style="font-size: 12px;">Get it by <span class="shipping-date">Wed, Dec 17</span> with standard shipping</span>
-                </div>
+                    </div>
             </div>
         </div>
 
@@ -176,18 +174,14 @@
     </div>
 
     <script>
-        // 页面加载完毕后执行
         window.onload = function() {
-            // 1. 从浏览器缓存 (localStorage) 中取出刚才在详情页存的数据
             var imgSrc = localStorage.getItem('checkoutImg');
             var title = localStorage.getItem('checkoutTitle');
             var price = localStorage.getItem('checkoutPrice');
 
-            // 2. 将取出的数据填入页面对应的位置
             if (imgSrc) {
                 document.getElementById('cart-item-img').src = imgSrc;
             } else {
-                // 如果没有图片数据（比如用户直接打开cart.html而不是跳转过来的）
                 document.getElementById('cart-item-img').alt = "No Item Selected";
             }
 
@@ -197,8 +191,8 @@
 
             if (price) {
                 document.getElementById('cart-item-price').innerText = price;
-                document.getElementById('summary-subtotal').innerText = price; // 更新小计
-                document.getElementById('summary-total').innerText = price;    // 更新总计
+                document.getElementById('summary-subtotal').innerText = price;
+                document.getElementById('summary-total').innerText = price;
             }
         };
     </script>
