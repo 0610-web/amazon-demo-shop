@@ -7,29 +7,60 @@
     <link rel="stylesheet" href="style.css?v=3"> 
     <style>
         body { margin: 0; padding: 0; font-family: "Amazon Ember", Arial, sans-serif; background-color: #fff; }
+        
+        /* 顶部黑条导航 */
         .top-nav { background: #131921; padding: 10px 0; margin-bottom: 20px; }
         .nav-container { max-width: 1400px; margin: 0 auto; display: flex; align-items: center; padding: 0 20px; }
+        
+        /* Logo样式 */
         .nav-logo { height: 30px; object-fit: contain; }
-        .nav-back { color: white; margin-left: auto; text-decoration: none; font-size: 14px; border: 1px solid #fff; padding: 5px 10px; border-radius: 4px; }
+        
+        /* 返回按钮样式 */
+        .nav-back { 
+            color: white; 
+            margin-left: auto; 
+            text-decoration: none; 
+            font-size: 14px; 
+            border: 1px solid #fff;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
         .nav-back:hover { background-color: rgba(255,255,255,0.2); }
-        .content-container { max-width: 1000px; margin: 40px auto; padding: 20px; text-align: center; }
-        .about-image { max-width: 100%; height: auto; display: inline-block; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+
+        /* 内容容器 */
+        .content-container {
+            max-width: 1000px;
+            margin: 40px auto; 
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* 图片样式 */
+        .about-image {
+            max-width: 100%; 
+            height: auto;
+            display: inline-block;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+        }
     </style>
 </head>
 <body>
+
     <nav class="top-nav">
         <div class="nav-container">
             <img src="assets/xiaologo.jpg" alt="Logo" class="nav-logo">
+            
             <a href="index.html" class="nav-back">&lt; Back to Home</a>
         </div>
     </nav>
 
     <main class="content-container">
-        <img src="assets/assets/about-us/About-Us.jpg" alt="About Us Information" class="about-image">
+        <img src="assets/About/About-Us.jpg" alt="About Us Information" class="about-image">
     </main>
 
     <div style="text-align: center; font-size: 12px; color: #999; margin-top: 50px; padding-bottom: 20px;">
         &copy; 2024 90shine Party Shop. All rights reserved.
     </div>
+
 </body>
 </html>
