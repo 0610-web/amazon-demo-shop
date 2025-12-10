@@ -89,10 +89,10 @@
         // 1. 产品数据库 (这里定义你的所有产品)
         // ==========================================
         const products = {
+            // --- 产品 1 (车库门贴) ---
             "1": {
                 title: "32PCS Christmas Garage Door Decorations Magnets - Merry Xmas Ball Holiday Refrigerator Fridge Kitchen Decor(Red, Silver)",
                 price: 18.99,
-                // 图片数组：第一张是主图，后面是缩略图
                 images: [
                     "assets/Christmas-Garage-Door-Decorations-Magnets/Christmas-garage-door1.jpg",
                     "assets/Christmas-Garage-Door-Decorations-Magnets/Christmas-garage-door2.jpg",
@@ -108,44 +108,25 @@
                     "Versatile Application: Suitable for any metal surface including garage doors and fridges."
                 ]
             },
+
+            // --- 产品 2 (汽车冰箱贴) ---
             "2": {
-                title: "43PCS Christmas Gnome Magnets - Reflective Light Refrigerator Magnets for Holiday Decoration",
-                price: 15.99,
+                title: "90PCS Christmas Car Refrigerator Decorations - 42 Reflective Bulb Light Shaped Magnets 48 Magnetic Wires Ornaments Set Xmas Holiday Cute Decor",
+                price: 16.99,
                 images: [
-                    "https://via.placeholder.com/500x500?text=Gnome+Main+Image", // 如果你有真实图片，请替换这个路径
-                    "https://via.placeholder.com/500x500?text=Gnome+Detail+1",
-                    "https://via.placeholder.com/500x500?text=Gnome+Detail+2"
+                    "assets/Christmas-car-fridge-decoration/0.jpg",
+                    "assets/Christmas-car-fridge-decoration/1.jpg",
+                    "assets/Christmas-car-fridge-decoration/2.jpg",
+                    "assets/Christmas-car-fridge-decoration/3.jpg",
+                    "assets/Christmas-car-fridge-decoration/4.jpg",
+                    "assets/Christmas-car-fridge-decoration/5.jpg",
+                    "assets/Christmas-car-fridge-decoration/6.jpg"
                 ],
                 desc: [
-                    "Cute Gnome Design: Features 43 pieces of adorable gnome themed magnets.",
-                    "Reflective Material: Shines brightly when illuminated by lights at night.",
-                    "Perfect for Fridge & Car: Strong magnets stick well to cars, fridges, and mailboxes."
-                ]
-            },
-            "3": {
-                title: "314PCS Christmas Decorations - Mega Party Pack for Home & Office",
-                price: 19.99,
-                images: [
-                    "https://via.placeholder.com/500x500?text=314PCS+Main",
-                    "https://via.placeholder.com/500x500?text=Decor+Detail"
-                ],
-                desc: [
-                    "Mega Pack: Contains over 300 pieces of holiday decorations.",
-                    "DIY Fun: Great for family bonding and decorating together.",
-                    "High Quality Material: Durable and reusable for next year."
-                ]
-            },
-            "4": {
-                title: "Roll The Dice Gift Exchange Game - Fun Family Christmas Party Activity",
-                price: 11.99,
-                images: [
-                    "https://via.placeholder.com/500x500?text=Dice+Game+Main",
-                    "https://via.placeholder.com/500x500?text=Game+Card"
-                ],
-                desc: [
-                    "Interactive Party Game: Spice up your gift exchange with this fun dice game.",
-                    "Easy to Play: Simple rules suitable for all ages.",
-                    "Package Includes: 1 Giant Dice and 50 Game Cards."
+                    "Huge 90PCS Set: Includes 42 reflective bulb light magnets and 48 magnetic wires for a complete look.",
+                    "Reflective Effect: These magnets shine brightly when illuminated by headlights or street lamps.",
+                    "High Quality Material: Made of reflective film and magnetic back, durable and suitable for all weather conditions.",
+                    "Wide Application: Perfect for cars, refrigerators, mailboxes, garage doors, and any metal surface."
                 ]
             }
         };
@@ -173,7 +154,7 @@
 
             // B. 填充描述 (列表)
             const descList = document.getElementById('product-desc');
-            descList.innerHTML = ""; // 清空加载文字
+            descList.innerHTML = ""; 
             product.desc.forEach(text => {
                 let li = document.createElement('li');
                 li.innerText = text;
@@ -190,7 +171,7 @@
             }
 
             // 生成缩略图
-            thumbContainer.innerHTML = ""; // 清空
+            thumbContainer.innerHTML = ""; 
             product.images.forEach((imgSrc, index) => {
                 let thumb = document.createElement('img');
                 thumb.src = imgSrc;
@@ -198,7 +179,6 @@
                 
                 thumb.onclick = function() {
                     mainImg.src = this.src;
-                    // 切换选中状态样式
                     let siblings = thumbContainer.getElementsByTagName('img');
                     for (let j = 0; j < siblings.length; j++) siblings[j].classList.remove('active');
                     this.classList.add('active');
@@ -216,19 +196,18 @@
         }
 
         function buyNow() {
-            // 获取当前页面显示的数据
+            // 这一步是关键：把当前页面看到的内容存进浏览器缓存
             var currentImg = document.getElementById('main-display-img').src;
             var currentTitle = document.getElementById('product-title').innerText;
             var currentPrice = document.getElementById('product-price').innerText;
             var currentQty = document.getElementById('qty').value;
 
-            // 存入 LocalStorage 供 cart.html 使用
             localStorage.setItem('checkoutImg', currentImg);
             localStorage.setItem('checkoutTitle', currentTitle);
             localStorage.setItem('checkoutPrice', currentPrice);
             localStorage.setItem('checkoutQty', currentQty);
 
-            // 跳转
+            // 跳转到通用的 cart.html
             window.location.href = 'cart.html';
         }
     </script>
