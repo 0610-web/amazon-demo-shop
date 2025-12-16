@@ -1,158 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Yen Jean Party Shop</title>
+    <title>About Us - Yen Jean Party Shop</title>
     <link rel="stylesheet" href="style.css?v=6"> 
     <style>
-        /* 全局样式重置 */
-        body { margin: 0; padding: 0; font-family: "Amazon Ember", Arial, sans-serif; background-color: #fff; color: #0F1111; }
-        a { text-decoration: none; color: inherit; }
+        body { margin: 0; padding: 0; font-family: "Amazon Ember", Arial, sans-serif; background-color: #fff; }
         
-        /* =========================================
-           1. 导航栏样式 (与 Product 页面保持一致)
-           ========================================= */
-        .top-nav { background: #131921; padding: 10px 0; }
-        .nav-container { 
-            max-width: 1400px; 
-            margin: 0 auto; 
-            display: flex; 
-            align-items: center; 
-            padding: 0 20px; 
-            color: white;
-        }
-        .nav-logo { height: 30px; object-fit: contain; margin-right: 30px; cursor: pointer; }
+        /* 顶部黑条导航 */
+        .top-nav { background: #131921; padding: 10px 0; margin-bottom: 20px; }
+        .nav-container { max-width: 1400px; margin: 0 auto; display: flex; align-items: center; padding: 0 20px; color: white;}
         
-        /* 简单的导航链接样式 */
-        .nav-links { display: flex; gap: 20px; font-size: 14px; font-weight: bold; }
-        .nav-links a:hover { color: #e77600; text-decoration: underline; }
-
-        /* =========================================
-           2. 核心 Banner 样式 (已修正：高度自适应，不裁切)
-           ========================================= */
-        .hero-section {
-            width: 100%;
-            /* 关键：取消固定高度，设为 auto 让图片撑开 */
-            height: auto;       
-            min-height: auto;   
-            margin: 0;
-            padding: 0;
-            line-height: 0;     /* 消除图片底部的微小白边 */
-            overflow: hidden;
+        /* 返回按钮样式 */
+        .nav-back { 
+            color: white; 
+            margin-left: auto; 
+            text-decoration: none; 
+            font-size: 14px; 
+            border: 1px solid #fff;
+            padding: 5px 10px;
+            border-radius: 4px;
         }
+        .nav-back:hover { background-color: rgba(255,255,255,0.2); }
 
-        .hero-section img {
-            width: 100%;        /* 宽度强制占满屏幕 */
-            height: auto;       /* 高度按比例自动缩放 */
-            display: block;     
-            object-fit: contain; /* 确保图片完整显示 */
-            max-width: 100%;
-        }
-
-        /* =========================================
-           3. 产品列表样式 (Grid 布局)
-           ========================================= */
-        .main-content {
-            max-width: 1400px;
-            margin: 30px auto;
-            padding: 0 20px;
-        }
-        
-        .section-title {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 10px;
-        }
-
-        .product-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center; /* 居中对齐 */
-        }
-
-        .product-card {
-            background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            width: 300px; /* 卡片宽度 */
-            padding: 15px;
-            transition: box-shadow 0.3s;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .product-card:hover {
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        .card-image-container {
-            width: 100%;
-            height: 250px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 10px;
-            overflow: hidden;
-        }
-
-        .card-image-container img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-        }
-
-        .card-title {
-            font-size: 16px;
-            font-weight: 500;
-            line-height: 1.3em;
-            height: 2.6em; /* 限制标题两行高度 */
-            overflow: hidden;
-            margin-bottom: 8px;
-        }
-
-        .card-price {
-            font-size: 20px;
-            color: #B12704;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .view-btn {
-            background-color: #ffd814;
-            border: 1px solid #fcd200;
-            border-radius: 20px;
-            padding: 8px 0;
+        /* 内容容器 */
+        .content-container {
+            max-width: 1000px;
+            margin: 40px auto; 
+            padding: 20px;
             text-align: center;
-            cursor: pointer;
-            font-size: 13px;
-            margin-top: auto; /* 推到底部 */
-            display: block;
         }
-        .view-btn:hover { background-color: #f7ca00; }
 
-        /* =========================================
-           4. 页脚样式
-           ========================================= */
+        /* 核心：关于我们大图样式 */
+        .about-image {
+            max-width: 100%; 
+            height: auto;
+            display: inline-block;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+        }
+
+        /* 页脚样式 */
         .footer {
-            text-align: center;
-            font-size: 12px;
-            color: #999;
-            margin-top: 50px;
-            padding: 30px 0;
-            border-top: 1px solid #eee;
-            background-color: #fcfcfc;
-        }
-
-        /* 手机端优化 */
-        @media (max-width: 768px) {
-            .nav-container { flex-direction: column; gap: 10px; }
-            .nav-links { gap: 15px; }
-            .hero-section img { width: 100%; } /* 手机上依然保持100%宽 */
-            .product-card { width: 45%; min-width: 150px; } /* 手机上一行两个 */
+            text-align: center; 
+            font-size: 12px; 
+            color: #999; 
+            margin-top: 50px; 
+            padding-bottom: 20px;
         }
     </style>
 </head>
@@ -160,73 +54,21 @@
 
     <nav class="top-nav">
         <div class="nav-container">
-            <a href="index.html">
-                <img src="assets/xiaologo.jpg" alt="Yen Jean Logo" class="nav-logo">
+            <a href="index.html" style="font-size: 24px; font-weight: bold; color: white; text-decoration: none; margin-right: 15px; font-family: Arial, sans-serif;">
+                Yen Jean
             </a>
             
-            <div class="nav-links">
-                <a href="index.html">HOME</a>
-                <a href="#">HOLIDAY MAGNET</a>
-                <a href="#">CHRISTMAS PARTY</a>
-                <a href="about.html">ABOUT US</a>
-            </div>
+            <a href="index.html" class="nav-back">&lt; Back to Home</a>
         </div>
     </nav>
 
-    <div class="hero-section">
-        <img src="assets/banner.jpg" alt="Yen Jean Party Shop Banner">
-    </div>
-
-    <main class="main-content">
-        <h2 class="section-title">Featured Products</h2>
-        
-        <div class="product-grid">
-            
-            <div class="product-card">
-                <div class="card-image-container">
-                    <a href="product.html?id=1">
-                        <img src="assets/Christmas-Garage-Door-Decorations-Magnets/Christmas-garage-door1.jpg" alt="Garage Door Magnets">
-                    </a>
-                </div>
-                <div class="card-title">
-                    <a href="product.html?id=1">32PCS Christmas Garage Door Decorations Magnets</a>
-                </div>
-                <div class="card-price">$18.99 <span style="font-size:12px; color:#007185; font-weight:normal;">✓prime</span></div>
-                <a href="product.html?id=1" class="view-btn">View Details</a>
-            </div>
-
-            <div class="product-card">
-                <div class="card-image-container">
-                    <a href="product.html?id=2">
-                        <img src="assets/Christmas-car-fridge-decoration/0.jpg" alt="Car Magnets">
-                    </a>
-                </div>
-                <div class="card-title">
-                    <a href="product.html?id=2">90PCS Christmas Car Refrigerator Decorations - Bulb Light Shaped</a>
-                </div>
-                <div class="card-price">$16.99 <span style="font-size:12px; color:#007185; font-weight:normal;">✓prime</span></div>
-                <a href="product.html?id=2" class="view-btn">View Details</a>
-            </div>
-
-            <div class="product-card">
-                <div class="card-image-container">
-                    <a href="product.html?id=3">
-                        <img src="assets/43PCS-Christmas-Car-Refrigerator-Decoration/0.jpg" alt="Gnome Magnets">
-                    </a>
-                </div>
-                <div class="card-title">
-                    <a href="product.html?id=3">43PCS Christmas Car Refrigerator Decorations - Gnome Style</a>
-                </div>
-                <div class="card-price">$14.99 <span style="font-size:12px; color:#007185; font-weight:normal;">✓prime</span></div>
-                <a href="product.html?id=3" class="view-btn">View Details</a>
-            </div>
-
-        </div>
+    <main class="content-container">
+        <img src="assets/About/About-Us.jpg" alt="About Us Information" class="about-image">
     </main>
 
-    <footer class="footer">
+    <div class="footer">
         &copy; 2024 Yen Jean Party Shop. All rights reserved.
-    </footer>
+    </div>
 
 </body>
 </html>
