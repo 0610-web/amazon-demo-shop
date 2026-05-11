@@ -85,207 +85,79 @@
     </main>
 
     <script>
-        // ==========================================
-        // 1. 产品数据库
-        // ==========================================
         const products = {
             "1": {
                 title: "32PCS Christmas Garage Door Decorations Magnets - Merry Xmas Ball Holiday Refrigerator Fridge Kitchen Decor(Red, Silver)",
                 price: 18.99,
-                images: [
-                    "assets/Christmas-Garage-Door-Decorations-Magnets/Christmas-garage-door1.jpg",
-                    "assets/Christmas-Garage-Door-Decorations-Magnets/Christmas-garage-door2.jpg",
-                    "assets/Christmas-Garage-Door-Decorations-Magnets/Christmas-garage-door3.jpg",
-                    "assets/Christmas-Garage-Door-Decorations-Magnets/Christmas-garage-door4.jpg",
-                    "assets/Christmas-Garage-Door-Decorations-Magnets/Christmas-garage-door5.jpg",
-                    "assets/Christmas-Garage-Door-Decorations-Magnets/Christmas-garage-door6.jpg"
-                ],
-                desc: [
-                    "Christmas Garage Door Decorations: Includes 32 magnets—13 Christmas ball magnets, 6 letter magnets.",
-                    "Large size to visibly cover your garage door: Optimized for visibility from the street.",
-                    "Secure Magnetic Hold: Made with festive prints and a magnetic back.",
-                    "Versatile Application: Suitable for any metal surface including garage doors and fridges."
-                ]
+                images: ["assets/Christmas-Garage-Door-Decorations-Magnets/Christmas-garage-door1.jpg", "assets/Christmas-Garage-Door-Decorations-Magnets/Christmas-garage-door2.jpg", "assets/Christmas-Garage-Door-Decorations-Magnets/Christmas-garage-door3.jpg", "assets/Christmas-Garage-Door-Decorations-Magnets/Christmas-garage-door4.jpg", "assets/Christmas-Garage-Door-Decorations-Magnets/Christmas-garage-door5.jpg", "assets/Christmas-Garage-Door-Decorations-Magnets/Christmas-garage-door6.jpg"],
+                desc: ["Christmas Garage Door Decorations: Includes 32 magnets—13 Christmas ball magnets, 6 letter magnets.", "Large size to visibly cover your garage door: Optimized for visibility from the street.", "Secure Magnetic Hold: Made with festive prints and a magnetic back.", "Versatile Application: Suitable for any metal surface including garage doors and fridges."]
             },
             "2": {
                 title: "90PCS Christmas Car Refrigerator Decorations - 42 Reflective Bulb Light Shaped Magnets 48 Magnetic Wires Ornaments Set Xmas Holiday Cute Decor",
                 price: 16.99,
-                images: [
-                    "assets/Christmas-car-fridge-decoration/0.jpg",
-                    "assets/Christmas-car-fridge-decoration/1.jpg",
-                    "assets/Christmas-car-fridge-decoration/2.jpg",
-                    "assets/Christmas-car-fridge-decoration/3.jpg",
-                    "assets/Christmas-car-fridge-decoration/4.jpg",
-                    "assets/Christmas-car-fridge-decoration/5.jpg",
-                    "assets/Christmas-car-fridge-decoration/6.jpg"
-                ],
-                desc: [
-                    "Huge 90PCS Set: Includes 42 reflective bulb light magnets and 48 magnetic wires for a complete look.",
-                    "Reflective Effect: These magnets shine brightly when illuminated by headlights or street lamps.",
-                    "High Quality Material: Made of reflective film and magnetic back, durable and suitable for all weather conditions.",
-                    "Wide Application: Perfect for cars, refrigerators, mailboxes, garage doors, and any metal surface."
-                ]
+                images: ["assets/Christmas-car-fridge-decoration/0.jpg", "assets/Christmas-car-fridge-decoration/1.jpg", "assets/Christmas-car-fridge-decoration/2.jpg", "assets/Christmas-car-fridge-decoration/3.jpg", "assets/Christmas-car-fridge-decoration/4.jpg", "assets/Christmas-car-fridge-decoration/5.jpg", "assets/Christmas-car-fridge-decoration/6.jpg"],
+                desc: ["Huge 90PCS Set: Includes 42 reflective bulb light magnets and 48 magnetic wires for a complete look.", "Reflective Effect: These magnets shine brightly when illuminated by headlights or street lamps.", "High Quality Material: Made of reflective film and magnetic back, durable and suitable for all weather conditions.", "Wide Application: Perfect for cars, refrigerators, mailboxes, garage doors, and any metal surface."]
             },
             "3": {
                 title: "43PCS Christmas Car Refrigerator Decorations - Reflective Bulb Light Gnome Magnet Accessories Set Xmas Holiday Cute Decor",
                 price: 14.99,
-                images: [
-                    "assets/43PCS-Christmas-Car-Refrigerator-Decoration/0.jpg",
-                    "assets/43PCS-Christmas-Car-Refrigerator-Decoration/1.jpg",
-                    "assets/43PCS-Christmas-Car-Refrigerator-Decoration/2.jpg",
-                    "assets/43PCS-Christmas-Car-Refrigerator-Decoration/3.jpg",
-                    "assets/43PCS-Christmas-Car-Refrigerator-Decoration/4.jpg",
-                    "assets/43PCS-Christmas-Car-Refrigerator-Decoration/5.jpg",
-                    "assets/43PCS-Christmas-Car-Refrigerator-Decoration/6.jpg"
-                ],
-                desc: [
-                    "43PCS Value Set: Features adorable Gnome magnets and colorful bulb lights for a festive holiday look.",
-                    "Reflective Material: Designed to reflect light at night, making your car or fridge stand out.",
-                    "Cute Gnome Design: Adds a whimsical and cheerful touch to your Christmas decorations.",
-                    "Multi-Surface Use: Strong magnets adhere easily to cars, fridges, metal doors, and mailboxes."
-                ]
+                images: ["assets/43PCS-Christmas-Car-Refrigerator-Decoration/0.jpg", "assets/43PCS-Christmas-Car-Refrigerator-Decoration/1.jpg", "assets/43PCS-Christmas-Car-Refrigerator-Decoration/2.jpg", "assets/43PCS-Christmas-Car-Refrigerator-Decoration/3.jpg", "assets/43PCS-Christmas-Car-Refrigerator-Decoration/4.jpg", "assets/43PCS-Christmas-Car-Refrigerator-Decoration/5.jpg", "assets/43PCS-Christmas-Car-Refrigerator-Decoration/6.jpg"],
+                desc: ["43PCS Value Set: Features adorable Gnome magnets and colorful bulb lights for a festive holiday look.", "Reflective Material: Designed to reflect light at night, making your car or fridge stand out.", "Cute Gnome Design: Adds a whimsical and cheerful touch to your Christmas decorations.", "Multi-Surface Use: Strong magnets adhere easily to cars, fridges, metal doors, and mailboxes."]
             },
             "4": {
                 title: "90shine 314PCS Christmas Decorations Window Clings - Xmas Holiday Snowflake Santa Elf Reindeer Gnome Peeking Decals, Winter Wonderland Party Supplies Decor, 12 Sheets",
                 price: 9.99,
-                images: [
-                    "assets/314PCS-Christmas-Decorations-Window Clings/0.jpg",
-                    "assets/314PCS-Christmas-Decorations-Window Clings/1.jpg",
-                    "assets/314PCS-Christmas-Decorations-Window Clings/2.jpg"
-                ],
-                desc: [
-                    "Huge Set: Includes 314pcs window clings on 12 sheets.",
-                    "Festive Designs: Features Santa, Elf, Reindeer, Gnome, and Snowflakes.",
-                    "Double-Sided Print: Looks great from both inside and outside the window.",
-                    "Easy to Apply: No adhesive needed, just stick them on clean glass surfaces."
-                ]
+                images: ["assets/314PCS-Christmas-Decorations-Window Clings/0.jpg", "assets/314PCS-Christmas-Decorations-Window Clings/1.jpg", "assets/314PCS-Christmas-Decorations-Window Clings/2.jpg"],
+                desc: ["Huge Set: Includes 314pcs window clings on 12 sheets.", "Festive Designs: Features Santa, Elf, Reindeer, Gnome, and Snowflakes.", "Double-Sided Print: Looks great from both inside and outside the window.", "Easy to Apply: No adhesive needed, just stick them on clean glass surfaces."]
             },
             "5": {
                 title: "44 Pieces Christmas Car Refrigerator Decorations - Reflective Bulb Light Santa Reindeer Tree Snowman Magnet Accessories Set Xmas Holiday Cute Decor",
                 price: 15.99,
-                images: [
-                    "assets/44-Pieces-Christmas-Car-Refrigerator-Decorations/0.jpg",
-                    "assets/44-Pieces-Christmas-Car-Refrigerator-Decorations/1.jpg",
-                    "assets/44-Pieces-Christmas-Car-Refrigerator-Decorations/2.jpg"
-                ],
-                desc: [
-                    "Complete Set: 44 pieces including Santa, Reindeer, Tree, Snowman and Bulb lights.",
-                    "Reflective Material: Shines brightly under light at night for safety and style.",
-                    "Strong Magnets: Stays securely on cars, fridges, or mailboxes.",
-                    "Holiday Cheer: Perfect for adding a festive touch to your vehicle or kitchen."
-                ]
+                images: ["assets/44-Pieces-Christmas-Car-Refrigerator-Decorations/0.jpg", "assets/44-Pieces-Christmas-Car-Refrigerator-Decorations/1.jpg", "assets/44-Pieces-Christmas-Car-Refrigerator-Decorations/2.jpg"],
+                desc: ["Complete Set: 44 pieces including Santa, Reindeer, Tree, Snowman and Bulb lights.", "Reflective Material: Shines brightly under light at night for safety and style.", "Strong Magnets: Stays securely on cars, fridges, or mailboxes.", "Holiday Cheer: Perfect for adding a festive touch to your vehicle or kitchen."]
             },
             "6": {
                 title: "90shine Christmas Game White Elephant Gift Exchange Xmas Holiday Party Decoration Supplies",
                 price: 11.99,
-                images: [
-                    "assets/90shine-Christmas-Game-White-Elephant-Gift/0.jpg",
-                    "assets/90shine-Christmas-Game-White-Elephant-Gift/1.jpg",
-                    "assets/90shine-Christmas-Game-White-Elephant-Gift/2.jpg"
-                ],
-                desc: [
-                    "Classic Party Game: Essential for White Elephant or Yankee Swap gift exchanges.",
-                    "Fun for Everyone: Adds excitement and laughter to your holiday gathering.",
-                    "High Quality: Durable materials designed to last through the party.",
-                    "Includes everything you need to host a memorable gift exchange."
-                ]
+                images: ["assets/90shine-Christmas-Game-White-Elephant-Gift/0.jpg", "assets/90shine-Christmas-Game-White-Elephant-Gift/1.jpg", "assets/90shine-Christmas-Game-White-Elephant-Gift/2.jpg"],
+                desc: ["Classic Party Game: Essential for White Elephant or Yankee Swap gift exchanges.", "Fun for Everyone: Adds excitement and laughter to your holiday gathering.", "High Quality: Durable materials designed to last through the party.", "Includes everything you need to host a memorable gift exchange."]
             },
             "7": {
                 title: "90shine Christmas Gag Gifts Headband Hoop Ball Game White Elephant Exchange Party Xmas Holiday Fun Carnival Activities",
                 price: 17.99,
-                images: [
-                    "assets/90shine-Christmas-Gag-Gifts-Headband-Hoop-Ball-Game/0.jpg",
-                    "assets/90shine-Christmas-Gag-Gifts-Headband-Hoop-Ball-Game/1.jpg",
-                    "assets/90shine-Christmas-Gag-Gifts-Headband-Hoop-Ball-Game/2.jpg"
-                ],
-                desc: [
-                    "Interactive Fun: A hilarious game where players try to catch balls in the headband hoop.",
-                    "Perfect Icebreaker: Great for Christmas parties, family gatherings, and office events.",
-                    "Adjustable Headband: Fits most head sizes comfortably.",
-                    "Active Play: Gets people moving and laughing together."
-                ]
+                images: ["assets/90shine-Christmas-Gag-Gifts-Headband-Hoop-Ball-Game/0.jpg", "assets/90shine-Christmas-Gag-Gifts-Headband-Hoop-Ball-Game/1.jpg", "assets/90shine-Christmas-Gag-Gifts-Headband-Hoop-Ball-Game/2.jpg"],
+                desc: ["Interactive Fun: A hilarious game where players try to catch balls in the headband hoop.", "Perfect Icebreaker: Great for Christmas parties, family gatherings, and office events.", "Adjustable Headband: Fits most head sizes comfortably.", "Active Play: Gets people moving and laughing together."]
             },
             "8": {
                 title: "90shine Christmas Gag Gifts Headband Hoop Poop Shoot Game White Elephant Exchange Party Xmas Holiday Fun Carnival Activities",
                 price: 16.99,
-                images: [
-                    "assets/90shine-Christmas-Gag-Gifts-Headband-Hoop-Poop-Shoot-Game-White/0.jpg",
-                    "assets/90shine-Christmas-Gag-Gifts-Headband-Hoop-Poop-Shoot-Game-White/1.jpg",
-                    "assets/90shine-Christmas-Gag-Gifts-Headband-Hoop-Poop-Shoot-Game-White/2.jpg"
-                ],
-                desc: [
-                    "Hilarious Gag Gift: The 'Poop Shoot' theme guarantees laughter at any party.",
-                    "Party Favorite: Ideal for White Elephant exchanges or Secret Santa gifts.",
-                    "Simple Rules: Easy to learn and play for all ages.",
-                    "Memorable Moments: Create funny photos and memories with this unique game."
-                ]
+                images: ["assets/90shine-Christmas-Gag-Gifts-Headband-Hoop-Poop-Shoot-Game-White/0.jpg", "assets/90shine-Christmas-Gag-Gifts-Headband-Hoop-Poop-Shoot-Game-White/1.jpg", "assets/90shine-Christmas-Gag-Gifts-Headband-Hoop-Poop-Shoot-Game-White/2.jpg"],
+                desc: ["Hilarious Gag Gift: The 'Poop Shoot' theme guarantees laughter at any party.", "Party Favorite: Ideal for White Elephant exchanges or Secret Santa gifts.", "Simple Rules: Easy to learn and play for all ages.", "Memorable Moments: Create funny photos and memories with this unique game."]
             },
             "9": {
                 title: "28PCS Christmas Garage Door Decorations Magnets - Large Merry Xmas Gnome Snowman Tree Snowflakes Holiday Refrigerator Fridge Kitchen Decor",
                 price: 23.99,
-                images: [
-                    "assets/28PCS-Christmas-Garage-Door-Decorations-Magnets/0.jpg",
-                    "assets/28PCS-Christmas-Garage-Door-Decorations-Magnets/1.jpg",
-                    "assets/28PCS-Christmas-Garage-Door-Decorations-Magnets/2.jpg"
-                ],
-                desc: [
-                    "Large Scale Decor: 28 pieces designed to cover large areas like garage doors.",
-                    "Festive Designs: Includes Gnomes, Snowman, Trees, and Merry Christmas text.",
-                    "Magnetic Backing: Easy to apply and remove without damaging surfaces.",
-                    "Weather Resistant: Suitable for outdoor use on garage doors or mailboxes."
-                ]
+                images: ["assets/28PCS-Christmas-Garage-Door-Decorations-Magnets/0.jpg", "assets/28PCS-Christmas-Garage-Door-Decorations-Magnets/1.jpg", "assets/28PCS-Christmas-Garage-Door-Decorations-Magnets/2.jpg"],
+                desc: ["Large Scale Decor: 28 pieces designed to cover large areas like garage doors.", "Festive Designs: Includes Gnomes, Snowman, Trees, and Merry Christmas text.", "Magnetic Backing: Easy to apply and remove without damaging surfaces.", "Weather Resistant: Suitable for outdoor use on garage doors or mailboxes."]
             },
             "10": {
                 title: "32PCS Christmas Garage Door Decorations Magnets - Merry Xmas Ball Holiday Refrigerator Fridge Kitchen Decor(Red, White)",
                 price: 18.99,
-                images: [
-                    "assets/32PCS-Christmas-Garage-Door/0.jpg",
-                    "assets/32PCS-Christmas-Garage-Door/1.jpg",
-                    "assets/32PCS-Christmas-Garage-Door/2.jpg",
-                    "assets/32PCS-Christmas-Garage-Door/3.jpg",
-                    "assets/32PCS-Christmas-Garage-Door/4.jpg",
-                    "assets/32PCS-Christmas-Garage-Door/5.jpg",
-                    "assets/32PCS-Christmas-Garage-Door/6.jpg",
-                    "assets/32PCS-Christmas-Garage-Door/7.jpg"
-                ],
-                desc: [
-                    "Christmas garage door decorations: You will get 13 christmas ball magnets. 6 letter magnets including merry christmas. 13 bow rope magnets. Total is 32 magnets.",
-                    "Large size to visibly cover your garage door: Letter 'Chr' is 9.3\"*11.3\", letter 'm' magnet is 5.06”*5.1”. Christmas ball magnet is 6.5”*5.3”. Bow rope magnet is 5.9”*2.95”.",
-                    "Strong magnetic hold: They are made of festive printing and magnetic back. They are easily removable and will not hurt the surface of your garage door.",
-                    "Directly adsorb on any metal or magnetic surface: They are adjustable and removable, leaving no residue. Super cute and festive for the holidays.",
-                    "Share holiday joys to your neighbors with these holiday magnets: Great for your garage door, refrigerator, metal front door, dry eraser board, cabinets&more. Dress up your garage door with these cute magnets to make it more spirited this winter."
-                ]
+                images: ["assets/32PCS-Christmas-Garage-Door/0.jpg", "assets/32PCS-Christmas-Garage-Door/1.jpg", "assets/32PCS-Christmas-Garage-Door/2.jpg", "assets/32PCS-Christmas-Garage-Door/3.jpg", "assets/32PCS-Christmas-Garage-Door/4.jpg", "assets/32PCS-Christmas-Garage-Door/5.jpg", "assets/32PCS-Christmas-Garage-Door/6.jpg", "assets/32PCS-Christmas-Garage-Door/7.jpg"],
+                desc: ["Christmas garage door decorations: You will get 13 christmas ball magnets. 6 letter magnets including merry christmas. 13 bow rope magnets. Total is 32 magnets.", "Large size to visibly cover your garage door: Letter 'Chr' is 9.3\"*11.3\", letter 'm' magnet is 5.06”*5.1”. Christmas ball magnet is 6.5”*5.3”. Bow rope magnet is 5.9”*2.95”.", "Strong magnetic hold: They are made of festive printing and magnetic back. They are easily removable and will not hurt the surface of your garage door.", "Directly adsorb on any metal or magnetic surface: They are adjustable and removable, leaving no residue. Super cute and festive for the holidays.", "Share holiday joys to your neighbors with these holiday magnets: Great for your garage door, refrigerator, metal front door, dry eraser board, cabinets&more. Dress up your garage door with these cute magnets to make it more spirited this winter."]
             },
-            // --- 新增产品 11 ---
+            // --- 产品 11 (彩虹磁贴) ---
             "11": {
-                title: "Yen Jean Luxury Christmas Party Decoration Set - Reusable Holiday Magnets & Festive Accessories for Garage, Fridge and Metal Doors",
-                price: 19.99,
-                images: [
-                    "assets/Product-11-Name/1.jpg",
-                    "assets/Product-11-Name/2.jpg",
-                    "assets/Product-11-Name/3.jpg",
-                    "assets/Product-11-Name/4.jpg",
-                    "assets/Product-11-Name/5.jpg",
-                    "assets/Product-11-Name/6.jpg",
-                    "assets/Product-11-Name/7.jpg"
-                ],
-                desc: [
-                    "Premium Holiday Design: Specifically curated for US market demographics with vibrant, classic Christmas motifs.",
-                    "Extra Strong Magnetic Backing: Securely attaches to any metal surface without sliding, perfect for garage doors in windy conditions.",
-                    "High-Key Print Quality: Features bright, vivid colors using anti-fade technology for long-lasting seasonal use.",
-                    "Versatile Multi-Pack: A comprehensive set that covers large areas, transforming your home into a festive winter wonderland.",
-                    "Easy Application & Removal: No adhesive residue left behind; easily repositionable for the perfect holiday arrangement."
-                ]
+                title: "16PCS Funny Pride Gay Car Bumper Magnets: Bulk Magnetic Rainbow Decals Decorations for LGBT Parade Decor, Refrigerator, Truck, Prank Gift Ideas(Classic Style)",
+                price: 15.19,
+                images: ["assets/Product-11-Name/1.jpg", "assets/Product-11-Name/2.jpg", "assets/Product-11-Name/3.jpg", "assets/Product-11-Name/4.jpg", "assets/Product-11-Name/5.jpg", "assets/Product-11-Name/6.jpg", "assets/Product-11-Name/7.jpg"],
+                desc: ["16-Piece Different-design Magnets: Bulk pack of 16 funny, vibrant magnets, each with a different design. Ideal for creating a bold, personalized display.", "Eye-catching Colors for a Clear Display: Made with colorful vinyl and a magnetic backing. Printed with vivid colors to help your message stand out.", "Strong Magnetic Backing for Secure Placement: Designed with magnetism that provide a reliable hold on clean, flat metal surfaces.", "Versatile Use on Metal Surfaces: Easily sticks to metal surfaces like car bumpers, trucks, refrigerators, lockers, and garage doors.", "Adjustable & Removable with No Residue: Reposition or remove these decals freely without leaving sticky residue. A fun, reusable way to decorate."]
             }
         };
 
-        // ==========================================
-        // 2. 页面加载逻辑
-        // ==========================================
         window.onload = function() {
             const urlParams = new URLSearchParams(window.location.search);
             const productId = urlParams.get('id') || "1"; 
-
             const product = products[productId];
 
             if (!product) {
@@ -307,21 +179,14 @@
 
             const mainImg = document.getElementById('main-display-img');
             const thumbContainer = document.getElementById('thumbnail-container');
-            
-            if (product.images.length > 0) {
-                mainImg.src = product.images[0];
-            }
+            if (product.images.length > 0) mainImg.src = product.images[0];
 
             thumbContainer.innerHTML = ""; 
             product.images.forEach((imgSrc, index) => {
                 let thumb = document.createElement('img');
                 thumb.src = imgSrc;
-                thumb.onerror = function() {
-                    this.style.display = 'none';
-                };
-
+                thumb.onerror = function() { this.style.display = 'none'; };
                 if (index === 0) thumb.classList.add('active');
-                
                 thumb.onclick = function() {
                     mainImg.src = this.src;
                     let siblings = thumbContainer.getElementsByTagName('img');
@@ -338,16 +203,10 @@
         }
 
         function buyNow() {
-            var currentImg = document.getElementById('main-display-img').src;
-            var currentTitle = document.getElementById('product-title').innerText;
-            var currentPrice = document.getElementById('product-price').innerText;
-            var currentQty = document.getElementById("qty").value;
-
-            localStorage.setItem('checkoutImg', currentImg);
-            localStorage.setItem('checkoutTitle', currentTitle);
-            localStorage.setItem('checkoutPrice', currentPrice);
-            localStorage.setItem('checkoutQty', currentQty);
-
+            localStorage.setItem('checkoutImg', document.getElementById('main-display-img').src);
+            localStorage.setItem('checkoutTitle', document.getElementById('product-title').innerText);
+            localStorage.setItem('checkoutPrice', document.getElementById('product-price').innerText);
+            localStorage.setItem('checkoutQty', document.getElementById("qty").value);
             window.location.href = 'cart.html';
         }
     </script>
